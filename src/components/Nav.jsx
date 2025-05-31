@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import video from '../assets/video.mp4';
+
 
 const AnnouncementBanner = () => {
   const announcements = [
@@ -117,17 +119,10 @@ const App = () => {
       
       <AnnouncementBanner />
       <Header />
-      {/* <img className='w-full h-full object-cover' src="https://lnct.ac.in/wp-content/uploads/2021/04/lnct-slider2-1024x456.jpg" alt="" /> */}
-      <div class="relative w-full h-screen overflow-hidden">
-  <iframe
-    class="absolute top-0 left-0 w-full h-full pointer-events-none"
-    src="https://www.youtube.com/embed/xn0DENWNl4Q?autoplay=1&mute=1&loop=1&playlist=xn0DENWNl4Q&controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1"
-    frameborder="0"
-    allow="autoplay; encrypted-media"
-    allowfullscreen>
-  </iframe>
-</div>
-
+      <video autoPlay muted loop playsInline
+        className="w-full h-full object-contain">
+        <source src={video} type="video/mp4" />
+      </video>
     </div>
   );
 };
