@@ -60,7 +60,7 @@ const LNCTAbout = () => {
                 </div>
                 <div>
                   <div className="text-lg font-bold text-gray-800 mb-1">1994</div>
-                  <div className="text-gray-600 text-sm">Establishment of first LNCT campus in Bhopal</div>
+                  <div className="text-gray-600 text-sm ml-8">Establishment of LNCT campus in Bhopal</div>
                 </div>
               </div>
 
@@ -69,8 +69,8 @@ const LNCTAbout = () => {
                   <GraduationCap className="w-4 h-4 text-white" />
                 </div>
                 <div>
-                  <div className="text-lg font-bold text-gray-800 mb-1">2003</div>
-                  <div className="text-gray-600 text-sm">Expansion with LNCT University</div>
+                  <div className="text-lg font-bold text-gray-800  mb-1 ">2003</div>
+                  <div className="text-gray-600 text-sm ml-22">Expansion with LNCT University</div>
                 </div>
               </div>
 
@@ -80,7 +80,7 @@ const LNCTAbout = () => {
                 </div>
                 <div>
                   <div className="text-lg font-bold text-gray-800 mb-1">2010</div>
-                  <div className="text-gray-600 text-sm">Received A+ NAAC Accreditation</div>
+                  <div className="text-gray-600 text-sm ml-20">Received A+ NAAC Accreditation</div>
                 </div>
               </div>
 
@@ -90,7 +90,7 @@ const LNCTAbout = () => {
                 </div>
                 <div>
                   <div className="text-lg font-bold text-gray-800 mb-1">2020</div>
-                  <div className="text-gray-600 text-sm">Launch of Innovation & Incubation Hub</div>
+                  <div className="text-gray-600 text-sm ml-10">Launch of Innovation & Incubation Hub</div>
                 </div>
               </div>
             </div>
