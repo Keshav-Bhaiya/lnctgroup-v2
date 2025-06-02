@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import video from '../assets/video.mp4';
 
-
 const AnnouncementBanner = () => {
   const announcements = [
     { icon: "📍", text: "Central India" },
