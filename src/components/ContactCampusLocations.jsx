@@ -9,6 +9,8 @@ const ContactCampusLocations = () => {
     message: ''
   });
 
+  const [selectedCampus, setSelectedCampus] = useState(1);
+
   const campusLocations = [
     {
       id: 1,
@@ -16,7 +18,8 @@ const ContactCampusLocations = () => {
       address: 'Kachhuf Nagar, Raisen Road, Bhopal, Madhya Pradesh - 462022',
       phone: '+91 755-6185300',
       color: 'bg-blue-500',
-      icon: '📍'
+      icon: '📍',
+      embedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1889387.1306379174!2d75.8114580955954!3d22.345726898291034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c403aa0e35b89%3A0xbc3e9e7fc022f862!2sLakshmi%20Narain%20College%20of%20Technology%20%26%20Science%20(LNCTS)!5e0!3m2!1sen!2sin!4v1748968534083!5m2!1sen!2sin'
     },
     {
       id: 2,
@@ -24,7 +27,8 @@ const ContactCampusLocations = () => {
       address: 'AB Road, Indore, Madhya Pradesh - 453331',
       phone: '+91 731-4201000',
       color: 'bg-red-500',
-      icon: '📍'
+      icon: '📍',
+      embedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14721.469933595183!2d75.81577664872064!3d22.714578635341187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fdb93a968c8f%3A0x61f3006e9ee73a2c!2sLnct%20Indore!5e0!3m2!1sen!2sin!4v1748968669213!5m2!1sen!2sin'
     },
     {
       id: 3,
@@ -32,15 +36,17 @@ const ContactCampusLocations = () => {
       address: 'Kolar Road, Bhopal, Madhya Pradesh - 462042',
       phone: '+91 755-6185330',
       color: 'bg-green-500',
-      icon: '🎓'
+      icon: '🎓',
+      embedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.799110136901!2d77.42513137437267!3d23.177531010529435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c439eedfd261d%3A0xbda480b4e82fe8d7!2sLNCT%20University%2C%20Bhopal!5e0!3m2!1sen!2sin!4v1748969377031!5m2!1sen!2sin'
     },
     {
       id: 4,
-      name: 'JNCT Rewa',
-      address: 'Rewa-Satna Highway, Rewa, Madhya Pradesh - 486001',
-      phone: '+91 7662-241000',
+      name: 'JNCT Bhopal',
+      address: 'Bhopal, Madhya Pradesh - 462003',
+      phone: '+91 755-6185340',
       color: 'bg-yellow-500',
-      icon: '📍'
+      icon: '📍',
+      embedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3663.898501885067!2d77.41055797437728!3d23.319441105186392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c68e61ce99811%3A0xc7df8bdb6f8529e2!2sJai%20Narain%20College%20of%20Technology%20(JNCT)%2C%20Bhopal!5e0!3m2!1sen!2sin!4v1748969471533!5m2!1sen!2sin'
     }
   ];
 
@@ -59,6 +65,12 @@ const ContactCampusLocations = () => {
     alert('Message sent successfully!');
   };
 
+  const handleCampusSelect = (campusId) => {
+    setSelectedCampus(campusId);
+  };
+
+  const selectedCampusData = campusLocations.find(campus => campus.id === selectedCampus);
+
   return (
     <div className="min-h-screen bg-gray-50 py-8 px-4">
       <div className="max-w-7xl mx-auto">
@@ -76,26 +88,43 @@ const ContactCampusLocations = () => {
         <div className="grid lg:grid-cols-3 gap-8 mb-12">
           {/* Map Section */}
           <div className="lg:col-span-2">
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden h-96 lg:h-full">
-              {/* Map Placeholder - In real implementation, integrate Google Maps */}
-              <div className="relative w-full h-full bg-gradient-to-br from-blue-100 to-green-100 flex items-center justify-center">
-                <div className="absolute inset-0 bg-gray-200 opacity-20"></div>
-                <div className="text-center z-10">
-                  <MapPin className="w-16 h-16 text-blue-600 mx-auto mb-4" />
-                  <p className="text-gray-700 font-semibold">Interactive Map</p>
-                  <p className="text-sm text-gray-500 mt-2">
-                    Click "View larger map" to explore all campus locations
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              {/* Selected Campus Info */}
+              <div className="p-4 bg-white border-b">
+                <h3 className="text-lg font-bold text-gray-800 mb-2">
+                  {selectedCampusData?.name}
+                </h3>
+                <div className="flex items-start mb-2">
+                  <MapPin className="w-4 h-4 text-gray-500 mt-1 mr-2 flex-shrink-0" />
+                  <p className="text-sm text-gray-600">
+                    {selectedCampusData?.address}
                   </p>
-                  <button className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-                    View larger map
-                  </button>
                 </div>
-                
-                {/* Location Markers */}
-                <div className="absolute top-20 left-20 w-4 h-4 bg-blue-500 rounded-full animate-pulse"></div>
-                <div className="absolute top-32 right-32 w-4 h-4 bg-red-500 rounded-full animate-pulse"></div>
-                <div className="absolute bottom-24 left-1/3 w-4 h-4 bg-green-500 rounded-full animate-pulse"></div>
-                <div className="absolute bottom-20 right-20 w-4 h-4 bg-yellow-500 rounded-full animate-pulse"></div>
+                <div className="flex items-center">
+                  <Phone className="w-4 h-4 text-gray-500 mr-2 flex-shrink-0" />
+                  <a
+                    href={`tel:${selectedCampusData?.phone}`}
+                    className="text-sm text-orange-600 hover:text-orange-700 font-medium transition-colors"
+                  >
+                    {selectedCampusData?.phone}
+                  </a>
+                </div>
+              </div>
+
+              {/* Interactive Google Map */}
+              <div className="h-96 lg:h-[500px]">
+                {selectedCampusData && (
+                  <iframe
+                    src={selectedCampusData.embedUrl}
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title={`${selectedCampusData.name} Location`}
+                  />
+                )}
               </div>
             </div>
           </div>
@@ -108,7 +137,7 @@ const ContactCampusLocations = () => {
                 <h2 className="text-xl font-bold">Get In Touch</h2>
               </div>
               
-              <form className="space-y-4" onSubmit={handleSubmit}>
+              <div className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium mb-2">Name</label>
                   <input
@@ -118,7 +147,6 @@ const ContactCampusLocations = () => {
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-white placeholder-gray-400"
                     placeholder="Your Name"
-                    required
                   />
                 </div>
 
@@ -131,7 +159,6 @@ const ContactCampusLocations = () => {
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-white placeholder-gray-400"
                     placeholder="your.email@example.com"
-                    required
                   />
                 </div>
 
@@ -159,17 +186,16 @@ const ContactCampusLocations = () => {
                     rows="4"
                     className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-white placeholder-gray-400 resize-none"
                     placeholder="Your message here..."
-                    required
                   ></textarea>
                 </div>
 
                 <button
-                  type="submit"
+                  onClick={handleSubmit}
                   className="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
                 >
                   Send Message
                 </button>
-              </form>
+              </div>
             </div>
           </div>
         </div>
@@ -179,7 +205,10 @@ const ContactCampusLocations = () => {
           {campusLocations.map((location) => (
             <div
               key={location.id}
-              className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
+              className={`bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 cursor-pointer ${
+                selectedCampus === location.id ? 'ring-2 ring-orange-500' : ''
+              }`}
+              onClick={() => handleCampusSelect(location.id)}
             >
               <div className="flex items-start mb-4">
                 <div className={`w-10 h-10 ${location.color} rounded-full flex items-center justify-center text-white font-bold mr-3 flex-shrink-0`}>
@@ -205,11 +234,20 @@ const ContactCampusLocations = () => {
                   <a
                     href={`tel:${location.phone}`}
                     className="text-sm text-orange-600 hover:text-orange-700 font-medium transition-colors"
+                    onClick={(e) => e.stopPropagation()}
                   >
                     {location.phone}
                   </a>
                 </div>
               </div>
+              
+              {selectedCampus === location.id && (
+                <div className="mt-4 pt-4 border-t border-gray-200">
+                  <p className="text-xs text-orange-600 font-medium">
+                    📍 Currently viewing this campus
+                  </p>
+                </div>
+              )}
             </div>
           ))}
         </div>
