@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import video from '../assets/video.mp4';
+
 
 const AnnouncementBanner = () => {
   const announcements = [
@@ -104,7 +104,7 @@ const Header = () => {
 
 const App = () => {
   return (
-    <div className="w-screen h-screen overflow-x-hidden bg-red-400" style={{ marginTop: '-32px' }}>
+    <div className="" style={{ marginTop: '-32px' }}>
       
       <style jsx>{`
         @keyframes marquee {
@@ -118,17 +118,7 @@ const App = () => {
       
       <AnnouncementBanner />
       <Header />
-      <div className="mt-[-76px] w-full overflow-hidden ">
-  <video
-    autoPlay
-    muted
-    loop
-    playsInline
-    className="w-full h-full object-cover object-center"
-  >
-    <source src={video} type="video/mp4" />
-  </video>
-</div>
+   
 
     </div>
   );
