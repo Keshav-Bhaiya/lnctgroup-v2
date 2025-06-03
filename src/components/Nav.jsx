@@ -10,7 +10,7 @@ const AnnouncementBanner = () => {
   ];
 
   return (
-    <div className="bg-orange-500  text-white py-2 overflow-hidden">
+    <div className="bg-orange-500 z-[9] relative text-white py-2 overflow-hidden">
       <div className="animate-marquee flex space-x-12 whitespace-nowrap">
         {[...announcements, ...announcements].map((item, index) => (
           <div key={index} className="flex items-center space-x-2 text-sm">
@@ -43,7 +43,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden  md:flex items-center space-x-6">
             {navItems.map((item) => (
               <a
                 key={item}
@@ -118,10 +118,18 @@ const App = () => {
       
       <AnnouncementBanner />
       <Header />
-      <video autoPlay muted loop playsInline
-        className="w-full h-full object-contain">
-        <source src={video} type="video/mp4" />
-      </video>
+      <div className="mt-[-76px] w-full overflow-hidden ">
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="w-full h-full object-cover object-center"
+  >
+    <source src={video} type="video/mp4" />
+  </video>
+</div>
+
     </div>
   );
 };
