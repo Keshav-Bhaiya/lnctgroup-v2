@@ -8,7 +8,7 @@ const LNCTSections = () => {
       name: "Rahul Sharma",
       role: "Senior Engineer, Google",
       batch: "Batch of 2015",
-      image: "/api/placeholder/60/60",
+      image: "https://i.pinimg.com/736x/e6/92/15/e692151bfc86c7d523697aa0dbd1a5d0.jpg",
       quote: "The foundation I received at LNCT prepared me for global challenges and helped me secure my dream job at Google.",
       bgColor: "bg-green-50"
     },
@@ -16,7 +16,7 @@ const LNCTSections = () => {
       name: "Priya Patel",
       role: "Product Manager, Microsoft",
       batch: "Batch of 2016",
-      image: "/api/placeholder/60/60",
+      image: "https://i.pinimg.com/736x/6a/9d/9d/6a9d9d28137be97147a827dddf3437d9.jpg",
       quote: "The project-based learning and industry exposure at LNCT gave me the skills to excel in product management at Microsoft.",
       bgColor: "bg-blue-50"
     },
@@ -24,7 +24,7 @@ const LNCTSections = () => {
       name: "Ajay Verma",
       role: "Founder & CEO, TechSolutions",
       batch: "Batch of 2012",
-      image: "/api/placeholder/60/60",
+      image: "https://i.pinimg.com/736x/48/6f/23/486f2396c4a7928ddee07ca627066fe3.jpg",
       quote: "The entrepreneurial mindset I developed at LNCT's incubation center was instrumental in launching my successful startup.",
       bgColor: "bg-purple-50"
     }
@@ -153,7 +153,16 @@ const LNCTSections = () => {
 
           {/* Global Footprint Card */}
           <div className="mb-16">
-            <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-purple-900 rounded-2xl overflow-hidden">
+            <div
+              style={{
+                backgroundImage: `linear-gradient(rgba(20, 40, 60, 0.6), rgba(20, 40, 60, 0.6)), url('https://storage.googleapis.com/uxpilot-auth.appspot.com/dc26245f0a-b84038cc3eeed04985f8.png')`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                width: '100%',
+                height: '100%',
+              }}
+              className="relative w-full h-full rounded-2xl overflow-hidden"
+            >
               {/* Background Pattern */}
               <div className="absolute inset-0 opacity-30">
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-blue-600/20"></div>
@@ -165,7 +174,7 @@ const LNCTSections = () => {
                 <div className="absolute top-2/3 right-1/3 w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
                 <div className="absolute bottom-1/4 left-2/3 w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
               </div>
-              
+
               <div className="relative z-10 p-8 lg:p-12">
                 <div className="grid lg:grid-cols-2 gap-8 items-center">
                   <div className="text-white space-y-6">
@@ -174,7 +183,7 @@ const LNCTSections = () => {
                       LNCT alumni are making their mark in over 40 countries 
                       across 6 continents, leading innovation and excellence.
                     </p>
-                    
+
                     <div className="space-y-4">
                       <div className="flex items-center space-x-4">
                         <span className="text-3xl lg:text-4xl font-bold text-orange-400">50K+</span>
@@ -190,14 +199,12 @@ const LNCTSections = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   {/* World Map Visualization */}
                   <div className="relative h-64 lg:h-80">
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent to-purple-600/20 rounded-lg"></div>
                     <svg className="w-full h-full" viewBox="0 0 800 400" fill="none">
                       {/* Simplified world map outline */}
-                      <path d="M100 200 Q200 150 300 200 T500 200 Q600 180 700 200" stroke="rgba(59, 130, 246, 0.5)" strokeWidth="2" fill="none"/>
-                      <path d="M150 250 Q250 230 350 250 T550 250 Q650 240 720 250" stroke="rgba(59, 130, 246, 0.5)" strokeWidth="2" fill="none"/>
                       
                       {/* Glowing dots for major cities */}
                       <circle cx="150" cy="180" r="4" fill="#f97316" className="animate-pulse"/>
@@ -221,7 +228,9 @@ const LNCTSections = () => {
               <div key={index} className={`${testimonial.bgColor} p-6 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow`}>
                 <div className="flex items-center space-x-4 mb-4">
                   <div className="w-16 h-16 bg-gray-300 rounded-full overflow-hidden">
-                    <div className="w-full h-full bg-gradient-to-br from-blue-400 to-purple-500"></div>
+                    <div className="w-full h-full bg-gradient-to-br from-blue-400 to-purple-500">
+                      <img src={testimonial.image} alt={testimonial.name} className="w-full h-full object-cover" />
+                    </div>
                   </div>
                   <div>
                     <h4 className="font-bold text-gray-800">{testimonial.name}</h4>

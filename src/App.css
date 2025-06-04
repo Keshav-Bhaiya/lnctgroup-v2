@@ -1,4 +1,46 @@
+/* Base styles */
+body {
+  margin: 0;
+  margin-top: -32px;
+  padding: 0;
+  overflow-x: hidden;
+}
 
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
+
+/* Fix overflow issues */
+main {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Component-specific fixes */
+.LNCTHero,
+.LNCTAbout,
+.CampusShowcase,
+.PlacementsOverview,
+.StartupsInnovationLabs,
+.LNCTSections,
+.ContactCampusLocations {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 #root {
   max-width: 1280px;
   margin: 0 auto;

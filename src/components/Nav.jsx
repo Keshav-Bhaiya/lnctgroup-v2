@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-
 const AnnouncementBanner = () => {
   const announcements = [
     { icon: "📍", text: "Central India" },
@@ -26,14 +25,16 @@ const AnnouncementBanner = () => {
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const navItems = ['Home', 'About', 'Campuses', 'Events', 'Placements', 'Startups', 'News', 'Contact'];
+  const navItems = [
+    'Home', 'About', 'Campuses', 'Events',
+    'Placements', 'Startups', 'News', 'Contact'
+  ];
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          
-          {/* Logo Section */}
+          {/* Logo */}
           <div className="flex items-center space-x-3">
             <img
               className="w-32"
@@ -42,8 +43,8 @@ const Header = () => {
             />
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden  md:flex items-center space-x-6">
+          {/* Desktop Nav */}
+          <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               <a
                 key={item}
@@ -55,7 +56,7 @@ const Header = () => {
             ))}
           </div>
 
-          {/* Right Side Buttons */}
+          {/* Right Actions */}
           <div className="flex items-center space-x-4">
             <div
               className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-full text-sm font-medium transition"
@@ -64,7 +65,7 @@ const Header = () => {
               Apply Now
             </div>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile Menu Toggle */}
             <button
               className="md:hidden p-2"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -80,7 +81,7 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation Menu */}
+        {/* Mobile Nav */}
         {isMobileMenuOpen && (
           <div className="md:hidden border-t border-gray-200 pb-4">
             <div className="pt-2 space-y-1">
@@ -103,10 +104,17 @@ const Header = () => {
 };
 
 const App = () => {
+  // Hide horizontal scrollbar globally
+  useEffect(() => {
+    document.body.style.overflowX = 'hidden';
+    return () => {
+      document.body.style.overflowX = 'auto';
+    };
+  }, []);
+
   return (
-    <div className="" style={{ marginTop: '-32px' }}>
-      
-      <style jsx>{`
+    <div style={{ marginTop: 0, paddingTop: 0 }}>
+      <style>{`
         @keyframes marquee {
           0% { transform: translateX(100%); }
           100% { transform: translateX(-100%); }
@@ -114,14 +122,16 @@ const App = () => {
         .animate-marquee {
           animation: marquee 25s linear infinite;
         }
+        .announcement-container {
+          margin-top: 0 !important;
+          padding-top: 0 !important;
+        }
       `}</style>
-      
-      <AnnouncementBanner />
+      <div className="announcement-container">
+        <AnnouncementBanner />
+      </div>
       <Header />
-   
-
     </div>
   );
 };
-
 export default App;
