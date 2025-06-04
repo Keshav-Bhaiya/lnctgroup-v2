@@ -266,7 +266,7 @@ const ContactCampusLocations = () => {
               <button className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold">
                 Apply Now
               </button>
-              <button className="px-8 py-3 text-white bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors font-semibold">
+              <button className="px-8 py-3 text-white bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors font-semibold">
                 Download Brochure
               </button>
             </div>
