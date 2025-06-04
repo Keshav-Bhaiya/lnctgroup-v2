@@ -14,10 +14,15 @@ import ContactCampusLocations from './components/ContactCampusLocations'
 import Footer from './components/Footer'
 import InstitutionsPage from '../src/components/pages/InstitutionsPage ' // Import your institutions page
 
-// Home component containing all your existing content
-const HomePage = () => {
+
+
+
+function App() {
+
   return (
-    <>
+
+  <div className="w-screen ml-[-150px] min-h-screen overflow-x-hidden">
+      <Nav />
       <LNCTHero />
       <LNCTAbout />
       <CampusShowcase />
@@ -25,25 +30,9 @@ const HomePage = () => {
       <StartupsInnovationLabs />
       <LNCTSections />
       <ContactCampusLocations />
-    </>
-  )
-}
-
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <Router>
-      <div className='w-screen min-h-screen'>
-        <Nav />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/institutions" element={<InstitutionsPage />} />
-          {/* Add more routes as needed */}
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+      <Footer />
+  </div>
+     
   )
 }
 
