@@ -219,9 +219,9 @@ const PlacementsOverview = () => {
             </div>
 
             {/* Package Distribution Bar Chart */}
-            <div className="mt-8">
+            <div className="mt-8 ">
               <h3 className="text-lg font-semibold text-gray-800 mb-4">Average Package by Branch</h3>
-              <ResponsiveContainer width="100%" height={200}>
+              <ResponsiveContainer width="100%"  height={200}>
                 <BarChart data={currentData.barData} layout="horizontal">
                   <CartesianGrid strokeDasharray="3 3" />
                   <XAxis type="number" />

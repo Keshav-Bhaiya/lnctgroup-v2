@@ -130,8 +130,8 @@ const ContactCampusLocations = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="lg:col-span-1">
-            <div className="bg-slate-800 rounded-lg shadow-lg p-6 text-white">
+          <div className="lg:col-span-1  ">
+            <div className="bg-slate-800 mt-2.5 rounded-lg shadow-lg p-6 text-white">
               <div className="flex items-center mb-6">
                 <MessageSquare className="w-6 h-6 text-orange-500 mr-2" />
                 <h2 className="text-xl font-bold">Get In Touch</h2>
@@ -263,8 +263,8 @@ const ContactCampusLocations = () => {
               Contact us today to learn more about our programs and admission process.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold">
-                Apply Now
+              <button className="px-8 py-3  text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                <a className='' href="https://admissions.lnct.ac.in/">Apply Now</a> 
               </button>
               <button className="px-8 py-3 text-white bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors font-semibold">
                 Download Brochure

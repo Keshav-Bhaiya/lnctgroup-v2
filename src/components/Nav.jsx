@@ -60,7 +60,7 @@ const Header = () => {
           <div className="flex items-center space-x-4">
             <div
               className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-full text-sm font-medium transition"
-              onClick={() => alert('Apply Now clicked!')}
+              onClick={() => window.location.href = 'https://admissions.lnct.ac.in/'}
             >
               Apply Now
             </div>

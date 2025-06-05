@@ -42,7 +42,7 @@ const StartupsInnovationLabs = () => {
           </p>
           <div className="flex items-center text-orange-500 text-sm">
             <span className="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
-            LNCT University
+            LNCT Bhopal
           </div>
         </div>
 
@@ -68,7 +68,7 @@ const StartupsInnovationLabs = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Left Side - Success Stories */}
             <div>
-              <h2 className="text-2xl font-bold mb-4">Success Stories</h2>
+              <h2 className="text-2xl mr-20 font-bold mb-4">Success Stories</h2>
               <p className="text-gray-300 mb-6">
                 Our students have launched successful startups that have received national recognition and venture funding.
               </p>
@@ -98,7 +98,7 @@ const StartupsInnovationLabs = () => {
                   <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <span className="text-white text-xs">✓</span>
                   </div>
-                  <div>
+                  <div className='text-center ml-16'>
                     <h4 className="font-bold mb-1">AgriTech Innovations</h4>
                     <p className="text-gray-300 text-sm">Smart farming solutions using IoT and AI</p>
                   </div>
