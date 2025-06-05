@@ -266,9 +266,11 @@ const ContactCampusLocations = () => {
               <button className="px-8 py-3  text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold">
                 <a className='' href="https://admissions.lnct.ac.in/">Apply Now</a> 
               </button>
+              <a href="https://lnct.ac.in/wp-content/uploads/2025/03/LNCT-Brochure.pdf" download target="_blank" rel="noopener noreferrer">
               <button className="px-8 py-3 text-white bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors font-semibold">
                 Download Brochure
               </button>
+              </a>
             </div>
           </div>
         </div>
