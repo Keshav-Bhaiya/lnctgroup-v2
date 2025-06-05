@@ -46,20 +46,15 @@ const Header = () => {
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="text-gray-700 hover:text-orange-500 text-sm font-medium transition-colors"
-              >
+              <div key={item} className="text-blue-500 hover:text-orange-500 text-sm font-medium transition-colors cursor-pointer">
                 {item}
-              </a>
+              </div>
             ))}
           </div>
 
           {/* Right Actions */}
           <div className="flex items-center space-x-4">
-            <div
-              className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-full text-sm font-medium transition"
+            <div className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-full text-sm font-medium transition"
               onClick={() => window.location.href = 'https://admissions.lnct.ac.in/'}
             >
               Apply Now
