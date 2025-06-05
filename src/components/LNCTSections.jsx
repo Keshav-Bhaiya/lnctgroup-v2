@@ -249,7 +249,7 @@ const LNCTSections = () => {
           <div className="text-center mt-12">
             <button className="bg-red-600 hover:bg-red-700 text-white font-semibold px-8 py-4 rounded-full transition-colors flex items-center space-x-3 mx-auto">
               <Users className="w-5 h-5" />
-              <span>Join Alumni Network</span>
+              <span><a href="https://lnct.ac.in/alumni-cell/">Join Alumni Network</a> </span>
             </button>
           </div>
         </div>

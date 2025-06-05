@@ -105,9 +105,13 @@ const StartupsInnovationLabs = () => {
                 </div>
               </div>
 
-              <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-medium">
-                Join Our Incubator Program
-              </button>
+              
+                <a className='' href="https://lnct.ac.in/kalchuri-lnct-group-incubation-centre/">
+                <button className='bg-orange-500 mr-18 hover:bg-orange-600 text-blue px-6 py-3 rounded-lg font-medium'>
+                  Join Our Incubation Center
+                </button>
+                </a> 
+              
             </div>
 
             {/* Right Side - Image */}
