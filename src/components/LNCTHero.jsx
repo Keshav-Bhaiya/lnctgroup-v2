@@ -45,10 +45,12 @@ const LNCTHero = () => {
                     <Building2 size={18} />
                     Explore All Campuses
                   </button>
-                  <button className="bg-white hover:bg-gray-50 text-red-400 px-6 py-3 rounded-full font-medium text-base transition-all duration-200 flex items-center gap-2">
+                  <a href="https://admissions.lnct.ac.in/">
+                    <button className="bg-white hover:bg-gray-50 text-red-400 px-6 py-3 rounded-full font-medium text-base transition-all duration-200 flex items-center gap-2">
                     <Edit size={18} />
                     Apply Now
                   </button>
+                  </a>
                   <button className="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-full font-medium text-base transition-all duration-200 flex items-center gap-2">
                     <Briefcase size={18} />
                     See Placements

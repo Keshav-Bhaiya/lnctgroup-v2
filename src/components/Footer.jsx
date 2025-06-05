@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, Youtube } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -30,16 +30,16 @@ const Footer = () => {
             
             {/* Social Media Icons */}
             <div className="flex space-x-3">
-              <a href="#" className="w-8 h-8 bg-slate-800 rounded flex items-center justify-center hover:bg-slate-700 transition-colors">
+              <a href="https://www.facebook.com/LNCTGroupOfCollege/photos/" className="w-8 h-8 bg-slate-800 rounded flex items-center justify-center hover:bg-slate-700 transition-colors">
                 <Facebook size={16} className="text-blue-400" />
               </a>
-              <a href="#" className="w-8 h-8 bg-slate-800 rounded flex items-center justify-center hover:bg-slate-700 transition-colors">
-                <Twitter size={16} className="text-sky-400" />
+              <a href="https://www.youtube.com/c/LnctBroadcastingChannel" className="w-8 h-8 bg-slate-800 rounded flex items-center justify-center hover:bg-slate-700 transition-colors">
+                <Youtube size={16} className="text-sky-400" />
               </a>
-              <a href="#" className="w-8 h-8 bg-slate-800 rounded flex items-center justify-center hover:bg-slate-700 transition-colors">
+              <a href="https://www.instagram.com/lnctgroupofcolleges/" className="w-8 h-8 bg-slate-800 rounded flex items-center justify-center hover:bg-slate-700 transition-colors">
                 <Instagram size={16} className="text-pink-400" />
               </a>
-              <a href="#" className="w-8 h-8 bg-slate-800 rounded flex items-center justify-center hover:bg-slate-700 transition-colors">
+              <a href="https://www.linkedin.com/school/lnct-group-of-colleges/" className="w-8 h-8 bg-slate-800 rounded flex items-center justify-center hover:bg-slate-700 transition-colors">
                 <Linkedin size={16} className="text-blue-600" />
               </a>
             </div>
