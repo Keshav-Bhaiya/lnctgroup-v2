@@ -76,7 +76,7 @@ const ContactCampusLocations = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
+          <h1 className="text-4xl font-bold text-orange-500 mb-4">
             Contact & Campus Locations
           </h1>
           <p className="text-gray-600 text-lg">
@@ -189,12 +189,12 @@ const ContactCampusLocations = () => {
                   ></textarea>
                 </div>
 
-                <button
+                <div
                   onClick={handleSubmit}
                   className="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
                 >
                   Send Message
-                </button>
+                </div>
               </div>
             </div>
           </div>
@@ -263,13 +263,13 @@ const ContactCampusLocations = () => {
               Contact us today to learn more about our programs and admission process.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-3  text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+              <div className="px-8 py-3  text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold">
                 <a className='' href="https://admissions.lnct.ac.in/">Apply Now</a> 
-              </button>
+              </div>
               <a href="https://lnct.ac.in/wp-content/uploads/2025/03/LNCT-Brochure.pdf" download target="_blank" rel="noopener noreferrer">
-              <button className="px-8 py-3 text-white bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors font-semibold">
+              <div className="px-8 py-3 text-white bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors font-semibold">
                 Download Brochure
-              </button>
+              </div>
               </a>
             </div>
           </div>

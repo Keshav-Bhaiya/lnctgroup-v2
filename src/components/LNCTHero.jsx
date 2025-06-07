@@ -42,21 +42,21 @@ const LNCTHero = () => {
                 </p>
                 <div className="flex flex-wrap gap-4 justify-center">
                   <a href="/campuses">
-                    <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-medium text-base transition-all duration-200 flex items-center gap-2">
+                    <div className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-medium text-base transition-all duration-200 flex items-center gap-2">
                       <Building2 size={18} />
                       Explore All Campuses
-                    </button>
+                    </div>
                   </a>
                   <a href="https://admissions.lnct.ac.in/">
-                    <button className="bg-white hover:bg-gray-50 text-red-400 px-6 py-3 rounded-full font-medium text-base transition-all duration-200 flex items-center gap-2">
+                    <div className="bg-white hover:bg-gray-50 text-red-400 px-6 py-3 rounded-full font-medium text-base transition-all duration-200 flex items-center gap-2">
                       <Edit size={18} />
                       Apply Now
-                    </button>
+                    </div>
                   </a>
-                  <button className="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-full font-medium text-base transition-all duration-200 flex items-center gap-2">
+                  <div className="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-full font-medium text-base transition-all duration-200 flex items-center gap-2">
                     <Briefcase size={18} />
-                    See Placements
-                  </button>
+                    See Departments
+                  </div>
                 </div>
               </div>
             </div>
@@ -64,12 +64,12 @@ const LNCTHero = () => {
         </div>
       </div>
       
-      {/* Help Button */}
+      {/* Help div */}
       <div className="fixed bottom-6 right-6 z-20">
-        <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full shadow-lg transition-all duration-200 flex items-center gap-2 text-sm font-medium">
+        <div className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full shadow-lg transition-all duration-200 flex items-center gap-2 text-sm font-medium">
           <span className="w-2 h-2 bg-white rounded-full"></span>
           Help
-        </button>
+        </div>
       </div>
     </div>
   );

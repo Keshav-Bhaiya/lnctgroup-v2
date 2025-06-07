@@ -31,7 +31,7 @@ const LNCTSections = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50" id="lnct-alumni-section">
       {/* Mobile Experience Section */}
       <section className="py-16 px-4 bg-gradient-to-br from-orange-50 to-blue-50">
         <div className="max-w-7xl mx-auto">

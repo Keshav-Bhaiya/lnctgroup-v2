@@ -27,7 +27,7 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
-    'Home', 'About', 'Campuses', 'Events',
+    'Home', 'About', 'Campuses', 'Alumni',
     'Placements', 'Startups', 'Departments', 'Contact'
   ];
 
@@ -36,6 +36,17 @@ const Header = () => {
     const aboutSection = document.getElementById('lnctabout');
     if (aboutSection) {
       aboutSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
+  // Function to handle smooth scrolling to Alumni section
+  const handleAlumniClick = () => {
+    const alumniSection = document.getElementById('lnct-alumni-section');
+    if (alumniSection) {
+      alumniSection.scrollIntoView({ 
         behavior: 'smooth',
         block: 'start'
       });
@@ -104,6 +115,8 @@ const Header = () => {
           <Link to={routes[item]}>{item}</Link>
         ) : item === 'About' ? (
           <span onClick={handleAboutClick}>{item}</span>
+        ) : item === 'Alumni' ? (
+          <span onClick={handleAlumniClick}>{item}</span>
         ) : item === 'Placements' ? (
           <span onClick={handlePlacementsClick}>{item}</span>
         ) : item === 'Startups' ? (
@@ -149,13 +162,16 @@ const Header = () => {
               {navItems.map((item) => (
                 <a
                   key={item}
-                  href={item === 'About' || item === 'Placements' || item === 'Startups' || item === 'Contact' ? '#' : `#${item.toLowerCase()}`}
+                  href={item === 'About' || item === 'Alumni' || item === 'Placements' || item === 'Startups' || item === 'Contact' ? '#' : `#${item.toLowerCase()}`}
                   className="block px-4 py-2 text-gray-700 hover:text-orange-500 hover:bg-gray-100 transition"
                   onClick={(e) => {
                     setIsMobileMenuOpen(false);
                     if (item === 'About') {
                       e.preventDefault();
                       handleAboutClick();
+                    } else if (item === 'Alumni') {
+                      e.preventDefault();
+                      handleAlumniClick();
                     } else if (item === 'Placements') {
                       e.preventDefault();
                       handlePlacementsClick();
