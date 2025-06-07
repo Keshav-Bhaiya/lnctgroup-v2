@@ -31,6 +31,50 @@ const Header = () => {
     'Placements', 'Startups', 'Departments', 'Contact'
   ];
 
+  // Function to handle smooth scrolling to About section
+  const handleAboutClick = () => {
+    const aboutSection = document.getElementById('lnctabout');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
+  // Function to handle smooth scrolling to Placements section
+  const handlePlacementsClick = () => {
+    const placementsSection = document.getElementById('placements-overview');
+    if (placementsSection) {
+      placementsSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
+  // Function to handle smooth scrolling to Startups section
+  const handleStartupsClick = () => {
+    const startupsSection = document.getElementById('startups-innovation-labs');
+    if (startupsSection) {
+      startupsSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
+  // Function to handle smooth scrolling to Contact section
+  const handleContactClick = () => {
+    const contactSection = document.getElementById('contact-campus-locations');
+    if (contactSection) {
+      contactSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <header className="bg-white shadow-sm fixed  left-0 w-full z-[100]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,19 +89,27 @@ const Header = () => {
           </div>
 
           {/* Desktop Nav */}
-          {/* Desktop Nav */}
-<div className="hidden md:flex items-center space-x-6">
-  {navItems.map((item) => {
-    const routes = {
-      'Home': '/',
-      'Campuses': '/campuses',
-      'Departments': '/departments'
+          
+      <div className="hidden md:flex items-center space-x-6">
+        {navItems.map((item) => {
+        const routes = {
+          'Home': '/',
+          'Campuses': '/campuses',
+          'Departments': '/departments'
     };
     
     return (
       <div key={item} className="text-blue-500 hover:text-orange-500 text-sm font-medium transition-colors cursor-pointer">
         {routes[item] ? (
           <Link to={routes[item]}>{item}</Link>
+        ) : item === 'About' ? (
+          <span onClick={handleAboutClick}>{item}</span>
+        ) : item === 'Placements' ? (
+          <span onClick={handlePlacementsClick}>{item}</span>
+        ) : item === 'Startups' ? (
+          <span onClick={handleStartupsClick}>{item}</span>
+        ) : item === 'Contact' ? (
+          <span onClick={handleContactClick}>{item}</span>
         ) : (
           <span>{item}</span>
         )}
@@ -97,9 +149,24 @@ const Header = () => {
               {navItems.map((item) => (
                 <a
                   key={item}
-                  href={`#${item.toLowerCase()}`}
+                  href={item === 'About' || item === 'Placements' || item === 'Startups' || item === 'Contact' ? '#' : `#${item.toLowerCase()}`}
                   className="block px-4 py-2 text-gray-700 hover:text-orange-500 hover:bg-gray-100 transition"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(e) => {
+                    setIsMobileMenuOpen(false);
+                    if (item === 'About') {
+                      e.preventDefault();
+                      handleAboutClick();
+                    } else if (item === 'Placements') {
+                      e.preventDefault();
+                      handlePlacementsClick();
+                    } else if (item === 'Startups') {
+                      e.preventDefault();
+                      handleStartupsClick();
+                    } else if (item === 'Contact') {
+                      e.preventDefault();
+                      handleContactClick();
+                    }
+                  }}
                 >
                   {item}
                 </a>
@@ -134,6 +201,9 @@ const App = () => {
         .announcement-container {
           margin-top: 0 !important;
           padding-top: 0 !important;
+        }
+        html {
+          scroll-behavior: smooth;
         }
       `}</style>
       <div className="announcement-container">

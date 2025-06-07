@@ -96,7 +96,7 @@ const PlacementsOverview = () => {
   const COLORS = ['#f97316', '#3b82f6', '#ef4444'];
 
   return (
-    <div className="min-h-screen bg-gray-50 p-8">
+    <div id="placements-overview" className="min-h-screen bg-gray-50 p-8">
       {/* Header */}
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-gray-800 mb-4">Placements Overview</h1>

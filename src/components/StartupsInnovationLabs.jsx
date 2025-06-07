@@ -3,7 +3,7 @@ import { Lightbulb, Rocket, Glasses } from 'lucide-react';
 
 const StartupsInnovationLabs = () => {
   return (
-    <div className="min-h-screen bg-slate-800 text-white p-8">
+    <div id="startups-innovation-labs" className="min-h-screen bg-slate-800 text-white p-8">
       {/* Header */}
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold mb-4">
