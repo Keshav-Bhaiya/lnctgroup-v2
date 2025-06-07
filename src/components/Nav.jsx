@@ -45,17 +45,25 @@ const Header = () => {
           </div>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center space-x-6">
-              {navItems.map((item) => (
-                <div key={item} className="text-blue-500 hover:text-orange-500 text-sm font-medium transition-colors cursor-pointer">
-                  {item === 'Campuses' ? (
-                   <Link to="/campuses">{item}</Link>
-                  ) : (
-                    <span>{item}</span>
-                  )}
-                </div>
-              ))}
-          </div>
+          {/* Desktop Nav */}
+<div className="hidden md:flex items-center space-x-6">
+  {navItems.map((item) => {
+    const routes = {
+      'Home': '/',
+      'Campuses': '/campuses'
+    };
+    
+    return (
+      <div key={item} className="text-blue-500 hover:text-orange-500 text-sm font-medium transition-colors cursor-pointer">
+        {routes[item] ? (
+          <Link to={routes[item]}>{item}</Link>
+        ) : (
+          <span>{item}</span>
+        )}
+      </div>
+    );
+  })}
+</div>
 
           {/* Right Actions */}
           <div className="flex items-center space-x-4">
