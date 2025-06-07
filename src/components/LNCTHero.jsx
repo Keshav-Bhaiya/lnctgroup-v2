@@ -41,15 +41,17 @@ const LNCTHero = () => {
                   Across India
                 </p>
                 <div className="flex flex-wrap gap-4 justify-center">
-                  <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-medium text-base transition-all duration-200 flex items-center gap-2">
-                    <Building2 size={18} />
-                    Explore All Campuses
-                  </button>
+                  <a href="/campuses">
+                    <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-medium text-base transition-all duration-200 flex items-center gap-2">
+                      <Building2 size={18} />
+                      Explore All Campuses
+                    </button>
+                  </a>
                   <a href="https://admissions.lnct.ac.in/">
                     <button className="bg-white hover:bg-gray-50 text-red-400 px-6 py-3 rounded-full font-medium text-base transition-all duration-200 flex items-center gap-2">
-                    <Edit size={18} />
-                    Apply Now
-                  </button>
+                      <Edit size={18} />
+                      Apply Now
+                    </button>
                   </a>
                   <button className="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-full font-medium text-base transition-all duration-200 flex items-center gap-2">
                     <Briefcase size={18} />
@@ -61,41 +63,6 @@ const LNCTHero = () => {
           </div>
         </div>
       </div>
-      {/* <div  className="relative z-10 max-w-7xl mx-auto px-8 py-20">
-        <div  className="max-w-4xl">
-         
-          <h1 className="text-6xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            One Vision, Many Campuses —
-            <br />
-            <span className="text-orange-500">LNCT Group</span>
-          </h1>
-          
-          
-          <p className="text-xl text-white mb-12 leading-relaxed">
-            Uniting 10+ Institutions, 100+ Programs, and 100K+ Students
-            <br />
-            Across India
-          </p>
-          
-         
-          <div className="flex flex-wrap gap-4">
-            <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-medium text-base transition-all duration-200 flex items-center gap-2">
-              <Building2 size={18} />
-              Explore All Campuses
-            </button>
-            
-            <button className="bg-white hover:bg-gray-50 text-red-400 px-6 py-3 rounded-full font-medium text-base transition-all duration-200 flex items-center gap-2">
-              <Edit size={18} />
-              Apply Now
-            </button>
-            
-            <button className="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-full font-medium text-base transition-all duration-200 flex items-center gap-2">
-              <Briefcase size={18} />
-              See Placements
-            </button>
-          </div>
-        </div>
-      </div> */}
       
       {/* Help Button */}
       <div className="fixed bottom-6 right-6 z-20">
