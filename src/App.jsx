@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import Nav from './components/Nav'
@@ -12,27 +12,30 @@ import StartupsInnovationLabs from './components/StartupsInnovationLabs'
 import LNCTSections from './components/LNCTSections'
 import ContactCampusLocations from './components/ContactCampusLocations'
 import Footer from './components/Footer'
-import InstitutionsPage from '../src/components/pages/InstitutionsPage ' // Import your institutions page
+import InstitutionsPage from '../src/components/pages/InstitutionsPage '
 
-
-
+const HomePage = () => (
+  <>
+    <LNCTHero />
+    <LNCTAbout />
+    <CampusShowcase />
+    <PlacementsOverview />
+    <StartupsInnovationLabs />
+    <LNCTSections />
+    <ContactCampusLocations />
+    <Footer />
+  </>
+);
 
 function App() {
-
   return (
-
-  <div className="w-screen ml-[-150px] min-h-screen overflow-x-hidden">
+    <div className="w-screen ml-[-150px] min-h-screen overflow-x-hidden">
       <Nav />
-      <LNCTHero />
-      <LNCTAbout />
-      <CampusShowcase />
-      <PlacementsOverview />
-      <StartupsInnovationLabs />
-      <LNCTSections />
-      <ContactCampusLocations />
-      <Footer />
-  </div>
-     
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/campuses" element={<InstitutionsPage />} />
+      </Routes>
+    </div>
   )
 }
 

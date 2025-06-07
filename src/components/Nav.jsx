@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const AnnouncementBanner = () => {
   const announcements = [
@@ -45,11 +46,15 @@ const Header = () => {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-6">
-            {navItems.map((item) => (
-              <div key={item} className="text-blue-500 hover:text-orange-500 text-sm font-medium transition-colors cursor-pointer">
-                {item}
-              </div>
-            ))}
+              {navItems.map((item) => (
+                <div key={item} className="text-blue-500 hover:text-orange-500 text-sm font-medium transition-colors cursor-pointer">
+                  {item === 'Campuses' ? (
+                   <Link to="/campuses">{item}</Link>
+                  ) : (
+                    <span>{item}</span>
+                  )}
+                </div>
+              ))}
           </div>
 
           {/* Right Actions */}
