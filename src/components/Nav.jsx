@@ -28,7 +28,7 @@ const Header = () => {
 
   const navItems = [
     'Home', 'About', 'Campuses', 'Events',
-    'Placements', 'Startups', 'News', 'Contact'
+    'Placements', 'Startups', 'Departments', 'Contact'
   ];
 
   return (
@@ -50,7 +50,8 @@ const Header = () => {
   {navItems.map((item) => {
     const routes = {
       'Home': '/',
-      'Campuses': '/campuses'
+      'Campuses': '/campuses',
+      'Departments': '/departments'
     };
     
     return (

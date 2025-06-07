@@ -165,7 +165,7 @@ const PlacementsOverview = () => {
                     name === 'placement' ? 'Placement Rate' : 'Avg Package'
                   ]}
                 />
-                <Bar dataKey="placement" fill="#f97316" name="placement" />
+                <Bar dataKey="placement" fill="	#3b82f6" name="placement" />
               </BarChart>
             </ResponsiveContainer>
           </div>

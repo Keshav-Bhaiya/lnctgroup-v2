@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { ChevronDown, MapPin, Award, Users, GraduationCap, Building, Search, Filter } from 'lucide-react';
-
+import Footer from '../Footer'; // Adjust the path based on your file structure
 
 const LNCTInstitutionsPage = () => {
   const [selectedFilter, setSelectedFilter] = useState('All');
@@ -332,6 +332,9 @@ const LNCTInstitutionsPage = () => {
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

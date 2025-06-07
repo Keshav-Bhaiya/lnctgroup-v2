@@ -13,6 +13,7 @@ import LNCTSections from './components/LNCTSections'
 import ContactCampusLocations from './components/ContactCampusLocations'
 import Footer from './components/Footer'
 import InstitutionsPage from '../src/components/pages/InstitutionsPage '
+import ProgramsPage from '../src/components/pages/ProgramsPage'
 
 const HomePage = () => (
   <>
@@ -34,6 +35,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage/>} />
         <Route path="/campuses" element={<InstitutionsPage />} />
+        <Route path="/departments" element={<ProgramsPage />} />
       </Routes>
     </div>
   )

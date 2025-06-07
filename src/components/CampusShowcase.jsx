@@ -1,5 +1,6 @@
 import React from "react";
 import { MapPin, ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const CampusShowcase = () => {
   const campuses = [
@@ -17,7 +18,7 @@ const CampusShowcase = () => {
       id: 2,
       name: "LNCT Indore",
       description:
-        "Cutting-edge technology focus with strong industry connections. Taught by inspired, committed, and creative faculty.",
+        "Cutting-edge technology focus with strong industry connections. Taught by inspired and committed,  faculty.",
       location: "Indore, Madhya Pradesh",
       image:
         "https://tse1.mm.bing.net/th?id=OIP.5Yb6BE3ih9skoYQmAUMCVwHaDz&pid=Api&P=0&h=180",
@@ -44,6 +45,20 @@ const CampusShowcase = () => {
       flagship: false,
     },
   ];
+
+  const handleExploreCampus = (campusName) => {
+    console.log(`Exploring ${campusName}`);
+    // Add your navigation logic here
+  };
+
+  const handleViewAllCampuses = () => {
+    console.log("View all campuses");
+    // Add your navigation logic here
+  };
+
+  // Import useNavigate from react-router-dom
+
+  const navigate = useNavigate();
 
   return (
     <div className="bg-gradient-to-b from-orange-50 via-white to-blue-50 py-20 px-6 min-h-screen font-sans">
@@ -106,30 +121,28 @@ const CampusShowcase = () => {
                 />
               </div>
 
-              <div className="p-6 flex flex-col h-full justify-between">
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                    {campus.name}
-                  </h3>
-                  <p className="text-gray-700 text-sm leading-relaxed mb-5 min-h-[72px]">
-                    {campus.description}
-                  </p>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  {campus.name}
+                </h3>
+                <p className="text-gray-700 text-sm leading-relaxed mb-5">
+                  {campus.description}
+                </p>
+                
+                {/* Location */}
+                <div className="flex items-center text-orange-500 text-sm font-medium mb-4">
+                  <MapPin className="w-5 h-5 mr-2" />
+                  <span>{campus.location}</span>
                 </div>
-
-                {/* Location and Button */}
-                <div className="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center gap-4">
-                  <div className="flex items-center text-orange-500 text-sm font-medium">
-                    <MapPin className="w-5 h-5 mr-2" />
-                    <span>{campus.location}</span>
-                  </div>
-                  {/* Fix: Added Explore Campus button */}
-                  <button
-                    className="flex items-center gap-2 bg-gradient-to-r from-orange-500 to-blue-600 text-white px-4 py-2 rounded-full shadow-md hover:from-orange-600 hover:to-blue-700 transition-colors duration-300 font-semibold focus:outline-none focus:ring-4 focus:ring-orange-300"
-                    aria-label={`Explore campus ${campus.name}`}
-                  >
-                    Explore Campus <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
+                
+                {/* Explore Campus Button */}
+                <button
+                  onClick={() => handleExploreCampus(campus.name)}
+                  className="flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold transition-colors duration-300 focus:outline-none focus:underline"
+                  aria-label={`Explore campus ${campus.name}`}
+                >
+                  Explore Campus <ArrowRight className="w-4 h-4" />
+                </button>
               </div>
             </div>
           ))}
@@ -140,6 +153,7 @@ const CampusShowcase = () => {
           <button
             className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-600 to-blue-700 hover:from-orange-700 hover:to-blue-800 text-white px-10 py-4 rounded-full font-bold text-lg shadow-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-orange-300"
             aria-label="View all campuses"
+            onClick={() => navigate("/campuses")}
           >
             <span role="img" aria-label="building">
               🏛
