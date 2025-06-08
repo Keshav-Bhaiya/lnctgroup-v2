@@ -30,7 +30,7 @@ const HomePage = () => (
 
 function App() {
   return (
-    <div className="w-screen ml-[-150px] min-h-screen overflow-x-hidden">
+    <div className="w-screen ml-[-32px] min-h-screen overflow-x-hidden">
       <Nav />
       <Routes>
         <Route path="/" element={<HomePage/>} />

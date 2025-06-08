@@ -87,7 +87,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white shadow-sm fixed  left-0 w-full z-[100]">
+    <header className=" top-0 bg-white shadow-sm fixed  left-0 w-full z-[100]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -205,7 +205,7 @@ const App = () => {
   }, []);
 
   return (
-    <div style={{ marginTop: 0, paddingTop: 0 }}>
+    <div  style={{ marginTop: 0, paddingTop: 0 }}>
       <style>{`
         @keyframes marquee {
           0% { transform: translateX(100%); }
@@ -222,10 +222,8 @@ const App = () => {
           scroll-behavior: smooth;
         }
       `}</style>
-      <div className="announcement-container">
-        <AnnouncementBanner />
-      </div>
-      <Header />
+      
+      <Header  />
     </div>
   );
 };
