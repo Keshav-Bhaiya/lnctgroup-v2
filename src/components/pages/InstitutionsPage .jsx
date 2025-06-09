@@ -153,40 +153,50 @@ const LNCTInstitutionsPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 text-white py-20 px-4">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-6xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Explore Our LNCT Campuses
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed opacity-90">
-            Multi-disciplinary campuses, modern infrastructure, and 30+ years of 
-            educational excellence across Madhya Pradesh.
-          </p>
-          <button
-            onClick={handleViewAllInstitutions}
-            className="bg-white text-blue-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-50 transition-all duration-300 inline-flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-          >
-            View All Campuses <ChevronDown className="w-5 h-5" />
-          </button>
-        </div>
-      </section>
-
-      {/* Featured Institutions Preview */}
-      <section className="py-16 px-4">
+      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-24 px-6 overflow-hidden">
+    {/* Soft blue overlay */}
+    <div className="absolute inset-0 bg-blue-950/40 backdrop-blur-sm"></div>
+  
+    {/* Decorative blurred orbs */}
+    <div className="absolute -top-20 -left-20 w-72 h-72 bg-blue-500/30 rounded-full blur-3xl"></div>
+    <div className="absolute bottom-0 right-0 w-60 h-60 bg-blue-400/20 rounded-full blur-2xl"></div>
+  
+    <div className="relative max-w-6xl mx-auto text-center z-10">
+      <h1 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight mb-6 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">
+        Explore Our <span className="text-orange-400">LNCT Campuses</span>
+      </h1>
+      <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto leading-relaxed text-blue-100 opacity-90">
+        Multi-disciplinary campuses, modern infrastructure, and 30+ years of educational excellence across Madhya Pradesh.
+      </p>
+  
+      {/* Centered Button */}
+      <div className="flex justify-center">
+        <button
+          onClick={handleViewAllInstitutions}
+          className="bg-gradient-to-r from-blue-600 to-blue-400 hover:from-blue-500 hover:to-blue-300 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105 flex items-center gap-2"
+        >
+          View All Campuses <ChevronDown className="w-5 h-5" />
+        </button>
+      </div>
+    </div>
+  </section>
+        {/* Featured Institutions Preview */}
+                <section className="py-20 px-4 bg-gradient-to-b from-orange-100 via-white to-blue-100">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center mb-12">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Campuses</h2>
+            <div className="w-full md:w-auto">
+              <h2 className="text-4xl md:text-3xl font-extrabold text-blue-900 mb-3 relative text-left">
+                Our Campuses
+              </h2>
               <div className="flex flex-wrap gap-2 mb-6">
                 {filters.map((filter) => (
                   <button
                     key={filter}
                     onClick={() => setSelectedFilter(filter)}
-                    className={`px-4 py-2 rounded-full transition-all duration-300 ${
+                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                       selectedFilter === filter
-                        ? 'bg-blue-600 text-white shadow-lg'
-                        : 'bg-white text-gray-600 hover:bg-blue-50 border border-gray-200'
+                        ? 'bg-gradient-to-r from-blue-700 to-blue-500 text-white shadow-md'
+                        : 'bg-white text-gray-700 hover:bg-blue-100 border border-gray-300'
                     }`}
                   >
                     {filter}
@@ -194,42 +204,47 @@ const LNCTInstitutionsPage = () => {
                 ))}
               </div>
             </div>
-            <div className="relative">
+            <div className="relative mt-4 md:mt-0">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
                 placeholder="Search campuses..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent w-full md:w-80"
+                className="pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent w-full md:w-80 shadow-sm"
               />
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredInstitutions.slice(0, showAllInstitutions ? filteredInstitutions.length : 6).map((institution) => (
-              <div key={institution.id} className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group hover:-translate-y-2">
-                <div className="relative overflow-hidden">
-                  <div className="w-full h-48 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
-                    <Building className="w-16 h-16 text-blue-600" />
-                  </div>
+              <div key={institution.id} className="bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden group hover:-translate-y-1.5">
+                <div className="relative">
+                  <img
+                    src={institution.imageUrl || '/default-campus.jpg'}
+                    alt={institution.name}
+                    className="w-full h-48 object-cover"
+                  />
                   <div className="absolute top-4 right-4">
                     <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                      institution.type === 'Flagship' ? 'bg-yellow-100 text-yellow-800' :
-                      institution.type === 'Medical' ? 'bg-red-100 text-red-800' :
-                      institution.type === 'Business School' ? 'bg-green-100 text-green-800' :
-                      'bg-blue-100 text-blue-800'
+                      institution.type === 'Flagship'
+                        ? 'bg-yellow-100 text-yellow-800'
+                        : institution.type === 'Medical'
+                        ? 'bg-red-100 text-red-800'
+                        : institution.type === 'Business School'
+                        ? 'bg-green-100 text-green-800'
+                        : 'bg-blue-100 text-blue-800'
                     }`}>
                       {institution.type}
                     </span>
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">{institution.name}</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{institution.name}</h3>
                   <p className="text-gray-600 mb-4 line-clamp-3">{institution.description}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {institution.highlights.map((highlight, index) => (
-                      <span key={index} className="px-2 py-1 bg-blue-50 text-blue-700 text-sm rounded">
+                      <span key={index} className="px-2 py-1 bg-blue-100 text-blue-700 text-sm rounded-full">
                         {highlight}
                       </span>
                     ))}
@@ -244,10 +259,10 @@ const LNCTInstitutionsPage = () => {
           </div>
 
           {!showAllInstitutions && (
-            <div className="text-center mt-12">
+            <div className="text-center mt-16">
               <button
                 onClick={handleViewAllInstitutions}
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="bg-gradient-to-r from-blue-700 via-blue-500 to-blue-400 hover:from-blue-600 hover:to-blue-300 text-white px-10 py-4 rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
               >
                 View All Campuses
               </button>
@@ -255,6 +270,7 @@ const LNCTInstitutionsPage = () => {
           )}
         </div>
       </section>
+
 
       {/* Campus Locations */}
       <section ref={institutionsRef} className="py-16 px-4 bg-white">
@@ -271,10 +287,10 @@ const LNCTInstitutionsPage = () => {
                 {campusLocations.map((location, index) => (
                   <div key={index} className="flex items-start gap-4 p-4 bg-gray-50 rounded-lg">
                     <div className={`w-3 h-3 rounded-full ${location.color.replace('text', 'bg')} mt-2`}></div>
-                    <div>
-                      <h3 className={`font-semibold text-lg ${location.color}`}>
-                        {location.region}
-                      </h3>
+                                        <div>
+                                          <h3 className={`font-semibold text-lg ${location.color}`}>
+                                            {location.region}
+                                          </h3>
                       <p className="text-gray-600 mt-1">{location.description}</p>
                       <span className="text-sm text-gray-500">{location.count} campuses</span>
                     </div>

@@ -55,7 +55,8 @@ const LNCTHero = () => {
                   </a>
                   <div className="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-full font-medium text-base transition-all duration-200 flex items-center gap-2">
                     <Briefcase size={18} />
-                    See Departments
+                    <a href="/departments">See Departments</a>
+                    
                   </div>
                 </div>
               </div>
