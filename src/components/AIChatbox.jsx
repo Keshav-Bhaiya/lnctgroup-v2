@@ -31,7 +31,7 @@ const AIChatbox = () => {
       'fee': "Fee structure varies by course and campus. Please contact our admission office for detailed fee information or visit our official website.",
       'campus': "LNCT Group has 10+ campuses across India. Our main campus is in Bhopal, Madhya Pradesh. Would you like information about a specific campus?",
       'placement': "LNCT has excellent placement records with top companies like TCS, Infosys, Wipro, and many more visiting our campus regularly.",
-      'contact': "You can reach us at:\nPhone: +91-755-2740395\nEmail: info@lnct.ac.in\nAddress: Kerwa Dam Road, Bhopal, MP",
+      'contact': "You can reach us at:\nPhone: +91-755-2740395\nEmail: info@lnct.ac.in\nAddress: Raisen Road, Bhopal, MP",
       'default': "I'm here to help with information about LNCT Group - admissions, courses, campuses, placements, and more. What would you like to know?"
     };
 
