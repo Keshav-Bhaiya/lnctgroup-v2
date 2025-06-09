@@ -27,8 +27,8 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
-    'Home', 'About', 'Campuses', 'Alumni',
-    'Placements', 'Startups', 'Departments', 'Contact'
+    'Home', 'About', 'Campuses', 'Placements',
+    'Startups', 'Alumni', 'Departments', 'Contact'
   ];
 
   // Function to handle smooth scrolling to About section
