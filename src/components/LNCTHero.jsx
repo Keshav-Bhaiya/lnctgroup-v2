@@ -1,6 +1,7 @@
 import React from 'react';
 import { Building2, Edit, Briefcase } from 'lucide-react';
 import video from '../assets/video.mp4';
+import AIChatbox from './AIChatbox';
 const LNCTHero = () => {
   return (
     
@@ -69,7 +70,7 @@ const LNCTHero = () => {
       <div className="fixed bottom-6 right-6 z-20">
         <div className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full shadow-lg transition-all duration-200 flex items-center gap-2 text-sm font-medium">
           <span className="w-2 h-2 bg-white rounded-full"></span>
-          Help
+          <AIChatbox />
         </div>
       </div>
     </div>

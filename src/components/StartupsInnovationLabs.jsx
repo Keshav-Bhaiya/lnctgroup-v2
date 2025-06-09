@@ -36,7 +36,7 @@ const StartupsInnovationLabs = () => {
           <div className="w-12 h-12 bg-teal-500 rounded-lg flex items-center justify-center mb-4">
             <Rocket className="w-6 h-6 text-white" />
           </div>
-          <h3 className="text-xl font-bold mb-3">Startup Incubator</h3>
+          <h3 className="text-xl font-bold mb-3">Startup Incubation</h3>
           <p className="text-gray-300 mb-4">
             Providing infrastructure, funding, and mentorship to help student startups grow from concept to market.
           </p>

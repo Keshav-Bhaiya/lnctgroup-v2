@@ -49,13 +49,13 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-semibold text-lg mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">About Us</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Admissions</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Academics</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Research</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Placements</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Campus Life</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Contact Us</a></li>
+              <li><a href="https://lnct.ac.in/lnct-group/" className="text-gray-400 hover:text-white transition-colors text-sm">About Us</a></li>
+              <li><a href="https://lnct.ac.in/admission-process/" className="text-gray-400 hover:text-white transition-colors text-sm">Admissions</a></li>
+              <li><a href="https://lnct.ac.in/academics/" className="text-gray-400 hover:text-white transition-colors text-sm">Academics</a></li>
+              <li><a href="https://lnct.ac.in/wp-content/uploads/2021/06/Research-Development.pdf" className="text-gray-400 hover:text-white transition-colors text-sm">Research</a></li>
+              <li><a href="https://lnct.ac.in/placement-records/" className="text-gray-400 hover:text-white transition-colors text-sm">Placements</a></li>
+              <li><a href="https://lnct.ac.in/hostels/" className="text-gray-400 hover:text-white transition-colors text-sm">Campus Life</a></li>
+              <li><a href="https://lnct.ac.in/contact/" className="text-gray-400 hover:text-white transition-colors text-sm">Contact Us</a></li>
             </ul>
           </div>
 
@@ -63,13 +63,13 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-semibold text-lg mb-4">Programs</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Engineering</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Management</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Pharmacy</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Medical Sciences</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Computer Applications</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Science & Research</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Diploma Courses</a></li>
+              <li><a href="https://lnct.ac.in/computer-science-engineering/" className="text-gray-400 hover:text-white transition-colors text-sm">Engineering</a></li>
+              <li><a href="https://lnct.ac.in/lnct-mba/" className="text-gray-400 hover:text-white transition-colors text-sm">Management</a></li>
+              <li><a href="https://lnct.ac.in/lnct-pharmacy/" className="text-gray-400 hover:text-white transition-colors text-sm">Pharmacy</a></li>
+              <li><a href="https://lnctu.ac.in/school-of-medical-science/" className="text-gray-400 hover:text-white transition-colors text-sm">Medical Sciences</a></li>
+              <li><a href="https://lnct.ac.in/scope-of-bachelor-of-computer-applications-bca/" className="text-gray-400 hover:text-white transition-colors text-sm">Computer Applications</a></li>
+              <li><a href="https://lnct.ac.in/lnct-and-science/" className="text-gray-400 hover:text-white transition-colors text-sm">Science & Research</a></li>
+              <li><a href="https://lnctu.ac.in/courses-offered/" className="text-gray-400 hover:text-white transition-colors text-sm">Diploma Courses</a></li>
             </ul>
           </div>
 
@@ -110,9 +110,9 @@ const Footer = () => {
               © 2023 LNCT Group of Institutions. All rights reserved.
             </p>
             <div className="flex space-x-6">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Privacy Policy</a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Terms of Use</a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Sitemap</a>
+              <a href="https://lnct.ac.in/privacy-policy-2/" className="text-gray-400 hover:text-white transition-colors text-sm">Privacy Policy</a>
+              <a href="https://lnct.ac.in/terms-and-conditions/" className="text-gray-400 hover:text-white transition-colors text-sm">Terms and Conditions</a>
+              <a href="https://lnct.ac.in/the-national-institutional-ranking-framework/" className="text-gray-400 hover:text-white transition-colors text-sm">NIRF</a>
             </div>
           </div>
         </div>

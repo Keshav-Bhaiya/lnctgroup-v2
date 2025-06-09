@@ -136,13 +136,23 @@ const CampusShowcase = () => {
                 </div>
                 
                 {/* Explore Campus Button */}
-                <div
-                  onClick={() => handleExploreCampus(campus.name)}
+                <a
+                  href={
+                    campus.name === "LNCT Bhopal"
+                      ? "https://lnct.ac.in/"
+                      : campus.name === "LNCT University"
+                      ? "https://lnctu.ac.in/"
+                      : campus.name === "JNCT"
+                      ? "https://www.jnctbhopal.ac.in/"
+                      : "http://www.lnctgroup.in/lnct-indore/"
+                  }
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold transition-colors duration-300 focus:outline-none focus:underline"
                   aria-label={`Explore campus ${campus.name}`}
                 >
                   Explore Campus <ArrowRight className="w-4 h-4" />
-                </div>
+                </a>
               </div>
             </div>
           ))}

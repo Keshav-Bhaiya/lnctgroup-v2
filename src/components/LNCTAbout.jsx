@@ -1,5 +1,6 @@
 import React from 'react';
 import { Building2, GraduationCap, Award, Lightbulb } from 'lucide-react';
+import AIChatbox from './AIChatbox';
 
 const LNCTAbout = () => {
   return (
@@ -79,7 +80,7 @@ const LNCTAbout = () => {
       <div className="fixed bottom-6 right-6 z-20">
         <div className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-5 py-3 rounded-full shadow-xl transition-all duration-300 flex items-center gap-2 text-sm font-semibold">
           <span className="w-2 h-2 bg-white rounded-full animate-ping"></span>
-          Help
+          <AIChatbox />
         </div>
       </div>
     </div>
