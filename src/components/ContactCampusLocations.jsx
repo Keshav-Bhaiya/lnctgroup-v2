@@ -263,11 +263,11 @@ const ContactCampusLocations = () => {
               Contact us today to learn more about our programs and admission process.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <div className="px-8 py-3  text-white rounded-lg hover:bg-blue-500 transition-colors font-semibold">
+              <div className="px-8 py-3  text-white rounded-lg hover:bg-gray-200 transition-colors font-semibold">
                 <a className='' href="https://admissions.lnct.ac.in/">Apply Now</a> 
               </div>
               <a href="https://lnct.ac.in/wp-content/uploads/2025/03/LNCT-Brochure.pdf" download target="_blank" rel="noopener noreferrer">
-              <div className="px-8 py-3 text-white bg-gray-500 rounded-lg hover:bg-gray-300 transition-colors font-semibold">
+              <div className="px-8 py-3 text-white bg-gray-400 rounded-lg hover:bg-gray-500 transition-colors font-semibold">
                 Download Brochure
               </div>
               </a>
