@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { ChevronDown, MapPin, Award, Users, GraduationCap, Building, Search, ArrowRight, BookOpen, Star, Globe } from 'lucide-react';
+import { ChevronDown, MapPin, Award, Users, GraduationCap, Building, Search, ArrowRight, BookOpen, Star, Globe, Phone, Mail } from 'lucide-react';
 
 const LNCTInstitutionsPage = () => {
   const [selectedFilter, setSelectedFilter] = useState('All');
@@ -9,9 +9,9 @@ const LNCTInstitutionsPage = () => {
   const institutionsRef = useRef(null);
 
   const backgroundImages = [
-    "https://images.unsplash.com/photo-1562774053-701939374585?w=1920&h=1080&fit=crop",
-    "https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?w=1920&h=1080&fit=crop",
-    "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1920&h=1080&fit=crop"
+"https://lnct.ac.in/wp-content/uploads/2021/04/lnct-slider2-1024x456.jpg",
+    "https://lncpbhopal.in/img/lncp6.jpg",
+    "https://ucsworld.com/wp-content/uploads/2018/04/ln-medical-college-research-centre_bhopal.jpg"
   ];
 
   const institutions = [
@@ -21,7 +21,7 @@ const LNCTInstitutionsPage = () => {
       category: 'Engineering',
       type: 'Flagship',
       description: 'Engineering, Management, Medical programs with cutting-edge infrastructure and facilities.',
-      image: "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=300&fit=crop",
+      image: "https://lnct.ac.in/wp-content/uploads/2021/04/lnct-slider2-1024x456.jpg",
       highlights: ['Engineering', 'Management', 'Medical', 'Research'],
       established: '1994',
       accreditation: 'NBA, NAAC A+',
@@ -34,7 +34,7 @@ const LNCTInstitutionsPage = () => {
       category: 'Engineering',
       type: 'Upcoming Branch',
       description: 'Industry-centric programs in Indore\'s commercial hub with strong corporate connections.',
-      image: "https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?w=400&h=300&fit=crop",
+      image: "https://www.lnctindore.com/_next/image?url=%2Fbuilding2.png&w=1920&q=75",
       highlights: ['Engineering', 'Electronics', 'Computer Science'],
       established: '2010',
       accreditation: 'AICTE Approved',
@@ -47,7 +47,7 @@ const LNCTInstitutionsPage = () => {
       category: 'Medical',
       type: 'Autonomous University',
       description: 'Research-driven multidisciplinary institution with comprehensive academic programs.',
-      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&h=300&fit=crop",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsUi7j1ZiYJ13_RR_7kn9cek4oryTvovsPjw&s",
       highlights: ['Medical', 'Nursing', 'Research'],
       established: '2003',
       accreditation: 'UGC Recognized',
@@ -73,7 +73,7 @@ const LNCTInstitutionsPage = () => {
       category: 'Medical',
       type: 'Medical',
       description: 'Modern infrastructure, top faculty and state-of-the-art medical facilities.',
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=300&fit=crop",
+      image: "https://ucsworld.com/wp-content/uploads/2018/04/ln-medical-college-research-centre_bhopal.jpg",
       highlights: ['Medical', 'Healthcare', 'Research'],
       established: '2008',
       accreditation: 'MCI Approved',
@@ -92,6 +92,84 @@ const LNCTInstitutionsPage = () => {
       accreditation: 'AICTE, NBA',
       rating: 4.6,
       students: '2000+'
+    },
+    {
+      id: 7,
+      name: 'LNCT College of Pharmacy',
+      category: 'Medical',
+      type: 'Pharmacy',
+      description: 'Comprehensive pharmaceutical education with modern labs and research facilities.',
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=300&fit=crop",
+      highlights: ['Pharmacy', 'Research', 'Healthcare', 'Innovation'],
+      established: '2007',
+      accreditation: 'PCI Approved',
+      rating: 4.4,
+      students: '1200+'
+    },
+    {
+      id: 8,
+      name: 'LNCT Nursing College',
+      category: 'Medical',
+      type: 'Nursing',
+      description: 'Premier nursing education with clinical training and healthcare specializations.',
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop",
+      highlights: ['Nursing', 'Clinical', 'Healthcare', 'Practice'],
+      established: '2009',
+      accreditation: 'INC Approved',
+      rating: 4.5,
+      students: '800+'
+    },
+    {
+      id: 9,
+      name: 'LNCT Polytechnic',
+      category: 'Technical',
+      type: 'Polytechnic',
+      description: 'Diploma programs in engineering with industry-oriented curriculum and practical training.',
+      image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+      highlights: ['Diploma', 'Engineering', 'Industry', 'Skills'],
+      established: '2000',
+      accreditation: 'AICTE Approved',
+      rating: 4.2,
+      students: '2200+'
+    },
+    {
+      id: 10,
+      name: 'LNCT Law College',
+      category: 'Management',
+      type: 'Law',
+      description: 'Legal education with focus on constitutional law, corporate law and judicial services.',
+      image: "https://images.unsplash.com/photo-1589578527966-fdac0f44566c?w=400&h=300&fit=crop",
+      highlights: ['Law', 'Legal', 'Corporate', 'Judiciary'],
+      established: '2012',
+      accreditation: 'BCI Approved',
+      rating: 4.3,
+      students: '900+'
+    },
+    {
+      id: 11,
+      name: 'LNCT Design College',
+      category: 'Technical',
+      type: 'Design',
+      description: 'Creative design programs including fashion, interior, and graphic design specializations.',
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
+      highlights: ['Design', 'Creative', 'Fashion', 'Graphics'],
+      established: '2015',
+      accreditation: 'UGC Recognized',
+      rating: 4.1,
+      students: '600+'
+    },
+    {
+      id: 12,
+      name: 'LNCT Agriculture College',
+      category: 'Technical',
+      type: 'Agriculture',
+      description: 'Agricultural sciences with focus on sustainable farming and agricultural technology.',
+      image: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=400&h=300&fit=crop",
+      highlights: ['Agriculture', 'Farming', 'Technology', 'Sustainability'],
+      established: '2018',
+      accreditation: 'ICAR Approved',
+      rating: 4.0,
+      students: '700+'
     }
   ];
 
@@ -152,7 +230,7 @@ const LNCTInstitutionsPage = () => {
         </div>
 
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-blue-800/80 to-purple-900/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#14283c99] to-[#14283c99]"></div>
 
         {/* Floating Orbs */}
         <div className="absolute top-20 left-20 w-32 h-32 bg-blue-400/20 rounded-full blur-2xl animate-pulse"></div>
@@ -189,27 +267,13 @@ const LNCTInstitutionsPage = () => {
               Explore Campuses
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
-            
+            <a href=" https://tour.lnct.ac.in/LNCT/">
             <button className="group bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-5 rounded-full font-semibold text-lg hover:bg-white/20 transition-all duration-300 shadow-xl flex items-center gap-3">
               <Globe className="w-6 h-6" />
               Virtual Tour
               <ChevronDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
             </button>
-          </div>
-
-          {/* Slide Indicators */}
-          <div className="flex justify-center gap-3 mt-16">
-            {backgroundImages.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide 
-                    ? 'bg-orange-400 w-8' 
-                    : 'bg-white/40 hover:bg-white/60'
-                }`}
-              />
-            ))}
+            </a>
           </div>
         </div>
       </section>
@@ -219,7 +283,7 @@ const LNCTInstitutionsPage = () => {
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16" data-scroll data-scroll-speed="1">
-            <h2 className="text-5xl md:text-6xl font-black bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-6">
+            <h2 className="text-5xl md:text-6xl font-black bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent mb-6">
               Our Campuses
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -237,7 +301,7 @@ const LNCTInstitutionsPage = () => {
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 ${
                     selectedFilter === filter
                       ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
-                      : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200 shadow-sm'
+                      : 'bg-white text-gray-700 hover:cursor-pointer hover:bg-gray-100 border border-gray-200 shadow-sm'
                   }`}
                 >
                   {filter}
@@ -252,7 +316,7 @@ const LNCTInstitutionsPage = () => {
                 placeholder="Search campuses..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-12 pr-6 py-4 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent w-full lg:w-80 shadow-sm bg-white/80 backdrop-blur-sm"
+                className="pl-12 pr-6 py-4 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-blue-500 text-black focus:border-transparent w-full lg:w-80 shadow-sm bg-white/80 backdrop-blur-sm"
               />
             </div>
           </div>
@@ -265,7 +329,7 @@ const LNCTInstitutionsPage = () => {
                 className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2 hover:rotate-1"
                 style={{ animationDelay: `${index * 0.1}s` }}
                 data-scroll
-                data-scroll-speed={`${0.1 * (index + 1)}`}
+                data-scroll-speed={0.1 * (index + 1)}
               >
                 <div className="relative overflow-hidden">
                   <img
@@ -352,8 +416,7 @@ const LNCTInstitutionsPage = () => {
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-          }}></div>
+          backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")"          }}></div>
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
@@ -370,7 +433,7 @@ const LNCTInstitutionsPage = () => {
               
               <div className="space-y-6">
                 {campusLocations.map((location, index) => (
-                  <div key={index} className="group p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300" data-scroll data-scroll-speed={`${0.2 * (index + 1)}`}>
+                  <div key={index} className="group p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300" data-scroll data-scroll-speed={0.2 * (index + 1)}>
                     <div className="flex items-center gap-4 mb-3">
                       <div className={`w-4 h-4 rounded-full ${location.color.replace('text', 'bg')} animate-pulse`}></div>
                       <h3 className={`font-bold text-xl ${location.color}`}>
@@ -414,14 +477,14 @@ const LNCTInstitutionsPage = () => {
       <section className="py-20 px-4 bg-white relative overflow-hidden" data-scroll-section>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-purple-50"></div>
         <div className="max-w-7xl mx-auto relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent" data-scroll data-scroll-speed="1">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent" data-scroll data-scroll-speed="1">
             LNCT Group Excellence
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center group hover:scale-110 transition-transform duration-300" data-scroll data-scroll-speed={`${0.3 * (index + 1)}`}>
+              <div key={index} className="text-center group hover:scale-110 transition-transform duration-300" data-scroll data-scroll-speed={0.3 * (index + 1)}>
                 <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300">
-                  <stat.icon className="w-16 h-16 mx-auto mb-6 text-white" />
+                  {stat.icon && <stat.icon className="w-16 h-16 mx-auto mb-6 text-white" />}
                   <div className="text-4xl md:text-5xl font-black mb-3 text-white">{stat.number}</div>
                   <div className="text-blue-100 font-semibold">{stat.label}</div>
                 </div>
@@ -432,24 +495,51 @@ const LNCTInstitutionsPage = () => {
       </section>
 
       {/* Enhanced Call to Action */}
-      <section className="py-20 px-4 bg-gradient-to-r from-orange-500 via-orange-600 to-red-500 text-white relative overflow-hidden" data-scroll-section>
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="max-w-5xl mx-auto text-center relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6" data-scroll data-scroll-speed="1">Ready to Shape Your Future?</h2>
-          <p className="text-xl mb-12 opacity-90 max-w-3xl mx-auto leading-relaxed" data-scroll data-scroll-speed="0.5">
-            Join thousands of successful alumni who started their journey at LNCT. 
-            Discover the perfect institution that aligns with your dreams and ambitions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center" data-scroll data-scroll-speed="0.2">
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <div className="group bg-white text-orange-600 px-10 py-5 rounded-full font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105 flex items-center gap-3 justify-center">
-                <BookOpen className="w-6 h-6" />
-                Apply Now
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+      <section className="py-24 px-4 bg-gradient-to-br from-blue-50 to-indigo-100 relative overflow-hidden" data-scroll-section>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5"></div>
+        <div className="max-w-6xl mx-auto text-center relative z-10">
+          <div className="bg-white rounded-3xl shadow-2xl p-12 border border-gray-100">
+            <div className="mb-8">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mb-6">
+                <GraduationCap className="w-10 h-10 text-white" />
               </div>
-              <div className="group bg-transparent border-2 border-white text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-white hover:text-orange-600 transition-all duration-300 flex items-center gap-3 justify-center">
-                <Globe className="w-6 h-6" />
-                Get Information
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+                Ready to Shape Your Future?
+              </h2>
+              <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+                Join thousands of successful alumni who started their journey at LNCT. 
+                Discover the perfect institution that aligns with your dreams and ambitions.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8 border border-orange-100">
+                <BookOpen className="w-12 h-12 text-orange-600 mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-gray-800 mb-3">Apply Today</h3>
+                <p className="text-gray-600 mb-6">Start your application process and secure your spot in our prestigious institutions.</p>
+                <button className="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-xl font-semibold hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                  Apply Now
+                </button>
+              </div>
+              
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-100">
+                <Globe className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-gray-800 mb-3">Get Information</h3>
+                <p className="text-gray-600 mb-6">Download brochures, get admission details, and connect with our counselors.</p>
+                <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-600 hover:to-indigo-600 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                  Get Info
+                </button>
+              </div>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8 border-t border-gray-200">
+              <div className="flex items-center gap-3 text-gray-600">
+                <Phone className="w-5 h-5 text-orange-500" />
+                <span className="font-semibold">+91 755 288 8888</span>
+              </div>
+              <div className="flex items-center gap-3 text-gray-600">
+                <Mail className="w-5 h-5 text-blue-500" />
+                <span className="font-semibold">info@lnct.ac.in</span>
               </div>
             </div>
           </div>

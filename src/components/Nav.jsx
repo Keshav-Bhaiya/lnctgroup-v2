@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const AnnouncementBanner = () => {
   const announcements = [
@@ -25,64 +25,70 @@ const AnnouncementBanner = () => {
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const navItems = [
     'Home', 'About', 'Campuses', 'Placements',
     'Startups', 'Alumni', 'Departments', 'Contact'
   ];
 
-  // Function to handle smooth scrolling to About section
-  const handleAboutClick = () => {
-    const aboutSection = document.getElementById('lnctabout');
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  };
-
-  // Function to handle smooth scrolling to Alumni section
-  const handleAlumniClick = () => {
-    const alumniSection = document.getElementById('lnct-alumni-section');
-    if (alumniSection) {
-      alumniSection.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  };
-
-  // Function to handle smooth scrolling to Placements section
-  const handlePlacementsClick = () => {
-    const placementsSection = document.getElementById('placements-overview');
-    if (placementsSection) {
-      placementsSection.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  };
-
-  // Function to handle smooth scrolling to Startups section
-  const handleStartupsClick = () => {
-    const startupsSection = document.getElementById('startups-innovation-labs');
-    if (startupsSection) {
-      startupsSection.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  };
-
-  // Function to handle smooth scrolling to Contact section
-  const handleContactClick = () => {
-    const contactSection = document.getElementById('contact-campus-locations');
-    if (contactSection) {
-      contactSection.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
+  // Function to handle navigation and scrolling
+  const handleNavClick = (item) => {
+    if (item === 'About') {
+      navigate('/');
+      setTimeout(() => {
+        const aboutSection = document.getElementById('lnctabout');
+        if (aboutSection) {
+          aboutSection.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }, 100);
+    } else if (item === 'Alumni') {
+      navigate('/');
+      setTimeout(() => {
+        const alumniSection = document.getElementById('lnct-alumni-section');
+        if (alumniSection) {
+          alumniSection.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }, 100);
+    } else if (item === 'Placements') {
+      navigate('/');
+      setTimeout(() => {
+        const placementsSection = document.getElementById('placements-overview');
+        if (placementsSection) {
+          placementsSection.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }, 100);
+    } else if (item === 'Startups') {
+      navigate('/');
+      setTimeout(() => {
+        const startupsSection = document.getElementById('startups-innovation-labs');
+        if (startupsSection) {
+          startupsSection.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }, 100);
+    } else if (item === 'Contact') {
+      navigate('/');
+      setTimeout(() => {
+        const contactSection = document.getElementById('contact-campus-locations');
+        if (contactSection) {
+          contactSection.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }, 100);
     }
   };
 
@@ -113,18 +119,8 @@ const Header = () => {
       <div key={item} className="text-blue-500 hover:text-orange-500 text-sm font-medium transition-colors cursor-pointer">
         {routes[item] ? (
           <Link to={routes[item]}>{item}</Link>
-        ) : item === 'About' ? (
-          <span onClick={handleAboutClick}>{item}</span>
-        ) : item === 'Alumni' ? (
-          <span onClick={handleAlumniClick}>{item}</span>
-        ) : item === 'Placements' ? (
-          <span onClick={handlePlacementsClick}>{item}</span>
-        ) : item === 'Startups' ? (
-          <span onClick={handleStartupsClick}>{item}</span>
-        ) : item === 'Contact' ? (
-          <span onClick={handleContactClick}>{item}</span>
         ) : (
-          <span>{item}</span>
+          <span onClick={() => handleNavClick(item)}>{item}</span>
         )}
       </div>
     );
@@ -159,34 +155,39 @@ const Header = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden border-t border-gray-200 pb-4">
             <div className="pt-2 space-y-1">
-              {navItems.map((item) => (
-                <a
-                  key={item}
-                  href={item === 'About' || item === 'Alumni' || item === 'Placements' || item === 'Startups' || item === 'Contact' ? '#' : `#${item.toLowerCase()}`}
-                  className="block px-4 py-2 text-gray-700 hover:text-orange-500 hover:bg-gray-100 transition"
-                  onClick={(e) => {
-                    setIsMobileMenuOpen(false);
-                    if (item === 'About') {
-                      e.preventDefault();
-                      handleAboutClick();
-                    } else if (item === 'Alumni') {
-                      e.preventDefault();
-                      handleAlumniClick();
-                    } else if (item === 'Placements') {
-                      e.preventDefault();
-                      handlePlacementsClick();
-                    } else if (item === 'Startups') {
-                      e.preventDefault();
-                      handleStartupsClick();
-                    } else if (item === 'Contact') {
-                      e.preventDefault();
-                      handleContactClick();
-                    }
-                  }}
-                >
-                  {item}
-                </a>
-              ))}
+              {navItems.map((item) => {
+                const routes = {
+                  'Home': '/',
+                  'Campuses': '/campuses',
+                  'Departments': '/departments'
+                };
+
+                return (
+                  <div key={item}>
+                    {routes[item] ? (
+                      <Link
+                        to={routes[item]}
+                        className="block px-4 py-2 text-gray-700 hover:text-orange-500 hover:bg-gray-100 transition"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {item}
+                      </Link>
+                    ) : (
+                      <a
+                        href="#"
+                        className="block px-4 py-2 text-gray-700 hover:text-orange-500 hover:bg-gray-100 transition"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setIsMobileMenuOpen(false);
+                          handleNavClick(item);
+                        }}
+                      >
+                        {item}
+                      </a>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </div>
         )}
