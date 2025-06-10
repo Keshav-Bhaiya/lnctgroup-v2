@@ -34,7 +34,15 @@ const Header = () => {
 
   // Function to handle navigation and scrolling
   const handleNavClick = (item) => {
-    if (item === 'About') {
+    if (item === 'Home') {
+      navigate('/');
+      setTimeout(() => {
+        window.scrollTo({ 
+          top: 0, 
+          behavior: 'smooth' 
+        });
+      }, 100);
+    } else if (item === 'About') {
       navigate('/');
       setTimeout(() => {
         const aboutSection = document.getElementById('lnctabout');
@@ -110,7 +118,6 @@ const Header = () => {
       <div className="hidden md:flex items-center space-x-6">
         {navItems.map((item) => {
         const routes = {
-          'Home': '/',
           'Campuses': '/campuses',
           'Departments': '/departments'
     };
@@ -157,7 +164,6 @@ const Header = () => {
             <div className="pt-2 space-y-1">
               {navItems.map((item) => {
                 const routes = {
-                  'Home': '/',
                   'Campuses': '/campuses',
                   'Departments': '/departments'
                 };
