@@ -161,7 +161,7 @@ const LNCTInstitutionsPage = () => {
       rating: 4.1,
       students: '600+'
     },
-    {
+     {
       id: 12,
       name: 'LNCT Agriculture College',
       category: 'Technical',
@@ -173,6 +173,58 @@ const LNCTInstitutionsPage = () => {
       accreditation: 'ICAR Approved',
       rating: 4.0,
       students: '700+'
+    },
+    {
+      id: 13,
+      name: 'LNCT Jabalpur',
+      category: 'Engineering',
+      type: 'Jabalpur Campus',
+      description: 'Premier engineering college in Jabalpur offering B.Tech, MBA, and Pharmacy programs with modern infrastructure.',
+      image: "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=300&fit=crop",
+      highlights: ['B.Tech', 'MBA', 'Pharmacy', 'Engineering'],
+      established: '2010',
+      accreditation: 'AICTE, RGPV Affiliated',
+      rating: 4.4,
+      students: '3500+'
+    },
+    {
+      id: 14,
+      name: 'LNCT & Science (LNCTS)',
+      category: 'Technical',
+      type: 'Science College',
+      description: 'Comprehensive science education with research-oriented programs and modern laboratory facilities.',
+      image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=400&h=300&fit=crop",
+      highlights: ['Science', 'Research', 'Laboratory', 'Innovation'],
+      established: '2005',
+      accreditation: 'UGC Recognized',
+      rating: 4.2,
+      students: '1800+'
+    },
+    {
+      id: 15,
+      name: 'LNCTE (LNCT Excellence)',
+      category: 'Engineering',
+      type: 'Excellence Campus',
+      description: 'Advanced engineering programs with emphasis on excellence in technical education and industry collaboration.',
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
+      highlights: ['Excellence', 'Engineering', 'Industry', 'Technical'],
+      established: '2012',
+      accreditation: 'AICTE Approved',
+      rating: 4.3,
+      students: '2800+'
+    },
+    {
+      id: 16,
+      name: 'LNCT College of Pharmacy (Jabalpur)',
+      category: 'Medical',
+      type: 'Pharmacy',
+      description: 'Specialized pharmaceutical education in Jabalpur with state-of-the-art labs and research facilities.',
+      image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=400&h=300&fit=crop",
+      highlights: ['Pharmacy', 'Research', 'Healthcare', 'Clinical'],
+      established: '2015',
+      accreditation: 'PCI Approved',
+      rating: 4.1,
+      students: '1000+'
     }
   ];
 
@@ -360,7 +412,7 @@ const LNCTInstitutionsPage = () => {
                   {/* Rating */}
                   <div className="absolute top-4 left-4 flex items-center gap-1 bg-white/90 backdrop-blur-md px-2 py-1 rounded-full">
                     <Star className="w-4 h-4 text-yellow-500 fill-current" />
-                    <span className="text-sm font-semibold">{institution.rating}</span>
+                    <span className="text-sm font-semibold text-black">{institution.rating}</span>
                   </div>
                 </div>
 
