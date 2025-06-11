@@ -8,6 +8,7 @@ const LNCTInstitutionsPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [showAllInstitutions, setShowAllInstitutions] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVisible, setIsVisible] = useState(true); // Added state for floating box visibility
   const institutionsRef = useRef(null);
 
   const backgroundImages = [
@@ -497,56 +498,7 @@ const LNCTInstitutionsPage = () => {
       </section>
 
       {/* Enhanced Call to Action */}
-      <section className="py-24 px-4 bg-gradient-to-br from-blue-50 to-indigo-100 relative overflow-hidden" data-scroll-section>
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5"></div>
-        <div className="max-w-6xl mx-auto text-center relative z-10">
-          <div className="bg-white rounded-3xl shadow-2xl p-12 border border-gray-100">
-            <div className="mb-8">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mb-6">
-                <GraduationCap className="w-10 h-10 text-white" />
-              </div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
-                Ready to Shape Your Future?
-              </h2>
-              <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-                Join thousands of successful alumni who started their journey at LNCT. 
-                Discover the perfect institution that aligns with your dreams and ambitions.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8 border border-orange-100">
-                <BookOpen className="w-12 h-12 text-orange-600 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-gray-800 mb-3">Apply Today</h3>
-                <p className="text-gray-600 mb-6">Start your application process and secure your spot in our prestigious institutions.</p>
-                <button className="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-xl font-semibold hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105 shadow-lg">
-                  Apply Now
-                </button>
-              </div>
-              
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-100">
-                <Globe className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-gray-800 mb-3">Get Information</h3>
-                <p className="text-gray-600 mb-6">Download brochures, get admission details, and connect with our counselors.</p>
-                <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-600 hover:to-indigo-600 transition-all duration-300 transform hover:scale-105 shadow-lg">
-                  Get Info
-                </button>
-              </div>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8 border-t border-gray-200">
-              <div className="flex items-center gap-3 text-gray-600">
-                <Phone className="w-5 h-5 text-orange-500" />
-                <span className="font-semibold">+91 755 288 8888</span>
-              </div>
-              <div className="flex items-center gap-3 text-gray-600">
-                <Mail className="w-5 h-5 text-blue-500" />
-                <span className="font-semibold">info@lnct.ac.in</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       <style jsx>{`
         @keyframes fade-in {
@@ -581,12 +533,47 @@ const LNCTInstitutionsPage = () => {
           animation: slide-up 1s ease-out 0.6s both;
         }
       `}</style>
+      
       <div className="fixed bottom-6 right-6 z-20">
+        
         <div className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-5 py-3 rounded-full shadow-xl transition-all duration-300 flex items-center gap-2 text-sm font-semibold">
           <span className="w-2 h-2 bg-white rounded-full animate-ping"></span>
           <AIChatbox />
         </div>
+        
       </div>
+  <div className={`mt-20 px-9 mx-auto transform transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
+          <div className="bg-gradient-to-r from-blue-900 to-stone-900 rounded-3xl shadow-2xl p-12 text-center relative overflow-hidden">
+            {/* Background decoration */}
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-slate-600/20"></div>
+            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-blue-400/10 to-slate-400/10 rounded-full transform translate-x-32 -translate-y-32"></div>
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-slate-400/10 to-stone-400/10 rounded-full transform -translate-x-24 translate-y-24"></div>
+            
+            <div className="relative z-10">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Ready to Shape Your Future?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Join thousands of students who have transformed their lives through our world-class education programs.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://admissions.lnct.ac.in/">
+                <div className="group bg-white text-blue-900 hover:bg-blue-50 px-8 py-4 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 cursor-pointer">
+                  <span className="flex items-center justify-center">
+                    Apply Now
+                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </div></a>
+                <a href="https://lnct.ac.in/wp-content/uploads/2025/03/LNCT-Brochure.pdf">
+                <div className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-xl font-bold transition-all duration-300 cursor-pointer">
+                  Download Brochure
+                </div></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+
       <Footer />
     </div>
   );

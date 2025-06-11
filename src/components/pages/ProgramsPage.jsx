@@ -24,6 +24,17 @@ useEffect(() => {
   }, 3000);
   return () => clearInterval(interval);
 }, []);
+
+const scrollToPrograms = () => {
+  const programsSection = document.getElementById('programs-section');
+  if (programsSection) {
+    programsSection.scrollIntoView({ 
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
+};
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-slate-100 to-stone-100 relative overflow-hidden">
       {/* Animated background elements */}
@@ -70,12 +81,15 @@ useEffect(() => {
           </p>
           
           <div className="flex flex-col items-center justify-center sm:flex-row gap-4">
-            <div className="group bg-gradient-to-r from-blue-600 to-slate-600 hover:from-blue-700 hover:to-slate-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1">
-              <span className="flex items-center justify-center">
-                Explore Programs
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </span>
-            </div>
+            <div 
+            onClick={scrollToPrograms}
+            className="group bg-gradient-to-r from-blue-600 to-slate-600 hover:from-blue-700 hover:to-slate-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1 cursor-pointer"
+            >
+          <span className="flex items-center justify-center">
+          Explore Programs
+          <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </span>
+          </div>
             <div className="border-2 border-blue-400 text-blue-600 hover:bg-blue-400 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300">
               <a className='' href="https://tour.lnct.ac.in/LNCT/">Virtual Tour</a>
             </div>
