@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { ChevronDown, MapPin, Award, Users, GraduationCap, Building, Search, ArrowRight, BookOpen, Star, Globe, Phone, Mail } from 'lucide-react';
 import AIChatbox from "../AIChatbox" 
+import Footer from "../Footer";
 
 const LNCTInstitutionsPage = () => {
   const [selectedFilter, setSelectedFilter] = useState('All');
@@ -586,6 +587,7 @@ const LNCTInstitutionsPage = () => {
           <AIChatbox />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

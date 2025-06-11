@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowRight, BookOpen, Users, Award, Globe, ChevronDown, X, Calendar, MapPin, Clock } from 'lucide-react';
-import AIChatbox from "../AIChatbox"
+import AIChatbox from "../AIChatbox";
+import Footer from "../Footer";
 
 const LNCTHero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -8,7 +9,21 @@ const LNCTHero = () => {
   useEffect(() => {
     setIsVisible(true);
   }, []);
+const images = [
+  "https://lnct.ac.in/wp-content/uploads/2022/05/LNCT-Group-of-Colleges-18.jpeg",
+  "https://lnct.ac.in/wp-content/uploads/2021/05/ME-min-768x509.jpg",
+  "https://lnct.ac.in/wp-content/uploads/2021/05/Civil-Eng-Images-min.jpg",
+  "https://lnct.ac.in/wp-content/uploads/2022/05/LNCT-Group-of-Colleges-15.jpeg"
+];
 
+const [currentIndex, setCurrentIndex] = useState(0);
+
+useEffect(() => {
+  const interval = setInterval(() => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  }, 3000);
+  return () => clearInterval(interval);
+}, []);
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-slate-100 to-stone-100 relative overflow-hidden">
       {/* Animated background elements */}
@@ -82,20 +97,31 @@ const LNCTHero = () => {
         </div>
 
         {/* Right Visual Section */}
+        
         <div className={`w-1/2 transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-12 opacity-0'}`}>
           <div className="relative">
-            {/* Main card */}
+            
             <div className="bg-gradient-to-br from-blue-50/80 to-stone-50/60 backdrop-blur-lg rounded-3xl shadow-2xl overflow-hidden border border-blue-200">
-              {/* Campus visualization */}
+             
               <div className="h-92 relative overflow-hidden">
-                {/* Sky with gradient */}
-                <div className="absolute inset-0 bg-gradient-to-b from-blue-200 via-slate-300 to-stone-300">
-                  <img className='object-cover object-left w-full h-full' src="https://lnct.ac.in/wp-content/uploads/2021/05/LNCT-Group-of-colleges-20-1.jpg" alt="" />
-                </div>
+        
+      <div className="tier absolute inset-0 bg-gradient-to-b from-blue-200 via-slate-300 to-stone-300">
+  {images.map((img, index) => (
+    <img
+      key={index}
+      src={img}
+      alt={`Slide ${index}`}
+      className={`absolute inset-0 object-cover object-left w-full h-full transition-opacity duration-1000 ${
+        index === currentIndex ? "opacity-100" : "opacity-0"
+      }`}
+    />
+  ))}
+</div>
+
+
               </div>
             </div>
-            
-            {/* Floating accent elements */}
+        
             <div className="absolute -top-6 -right-6 w-16 h-16 bg-gradient-to-br from-blue-400 to-slate-400 rounded-full shadow-lg animate-pulse"></div>
             <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-br from-blue-400 to-stone-400 rounded-full shadow-lg animate-bounce"></div>
           </div>
@@ -126,6 +152,7 @@ const AcademicPrograms = () => {
     return () => observer.disconnect();
   }, []);
 
+
   const programs = [
     {
       id: 1,
@@ -137,6 +164,7 @@ const AcademicPrograms = () => {
       duration: "4 Years",
       location: "Main Campus",
       intake: "July 2025",
+      apply: "https://lnct.ac.in/",
       fullDescription: "Our Engineering & Technology programs offer comprehensive education across 15+ specializations including Computer Science, Mechanical, Electrical, Civil, and emerging fields like AI/ML and Robotics. Students gain hands-on experience through industry partnerships, internships, and project-based learning.",
       highlights: [
         "State-of-the-art laboratories and equipment",
@@ -156,6 +184,7 @@ const AcademicPrograms = () => {
       duration: "5.5 Years",
       location: "Medical Campus",
       intake: "August 2025",
+      apply: "https://lnctu.ac.in/ln-medical-college/",
       fullDescription: "Our MBBS program provides world-class medical education with extensive clinical training in our 500+ bed hospital. Students learn from experienced faculty and gain practical experience through patient care under supervision.",
       highlights: [
         "500+ bed multi-specialty hospital",
@@ -175,6 +204,7 @@ const AcademicPrograms = () => {
       duration: "5 Years",
       location: "Dental Campus",
       intake: "August 2025",
+      apply: "https://www.lnctrishiraj.ac.in/",
       fullDescription: "Our BDS program offers comprehensive dental education with hands-on clinical experience in our modern dental clinic. Students learn latest techniques and technologies in dentistry while providing community dental care.",
       highlights: [
         "Modern dental clinic with latest equipment",
@@ -192,6 +222,7 @@ const AcademicPrograms = () => {
       icon: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/0006_Management.jpg",
       stats: "100% Placement",
       duration: "2 Years",
+      apply: "https://lnctu.ac.in/school-of-management/",
       location: "Business School",
       intake: "June 2025",
       fullDescription: "Our MBA program develops future business leaders through comprehensive curriculum covering all aspects of management. Strong industry connections ensure excellent placement opportunities across various sectors.",
@@ -212,6 +243,7 @@ const AcademicPrograms = () => {
       stats: "Moot Court Available",
       duration: "5 Years",
       location: "Law College",
+      apply: "https://lnctu.ac.in/school-of-law/",
       intake: "July 2025",
       fullDescription: "Our integrated law program provides comprehensive legal education with practical training through moot courts, legal aid clinics, and internships with law firms and courts.",
       highlights: [
@@ -225,6 +257,7 @@ const AcademicPrograms = () => {
     {
       id: 6,
       title: "Architecture",
+      apply: "https://lnctu.ac.in/school-of-architecture/",
       description: "Creative architectural programs with design studios, workshop facilities, and sustainable building practices.",
       bgGradient: "from-blue-700 to-slate-700",
       icon: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/0010_Architecture.jpg",
@@ -245,6 +278,7 @@ const AcademicPrograms = () => {
     {
       id: 7,
       title: "Science & Humanities",
+      apply: "https://lnct.ac.in/lnct-and-science/",
       description: "Diverse programs in pure sciences and humanities with research opportunities and interdisciplinary approach.",
       bgGradient: "from-stone-700 to-blue-800",
       icon: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/boxImg_science_humanities.jpg",
@@ -264,6 +298,7 @@ const AcademicPrograms = () => {
     {
       id: 8,
       title: "Agriculture Sciences",
+      apply: "https://lnctu.ac.in/school-of-agriculture/",
       description: "Practical agricultural education with experimental farms, modern techniques, and sustainable farming practices.",
       bgGradient: "from-green-600 to-blue-600",
       icon: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/0011_Agriculture-Sciences.jpg",
@@ -283,6 +318,7 @@ const AcademicPrograms = () => {
     {
       id: 9,
       title: "Pharmacy",
+      apply:"https://lnct.ac.in/lnct-pharmacy/",
       description: "Comprehensive pharmaceutical education with modern labs, drug development facilities, and industry connections.",
       bgGradient: "from-slate-700 to-stone-800",
       icon: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/boxImg_pharmacy.jpg",
@@ -302,6 +338,7 @@ const AcademicPrograms = () => {
     {
       id: 10,
       title: "Nursing",
+      apply:"https://lnctu.ac.in/school-of-nursing/",
       description: "Professional nursing education with clinical training, patient care excellence, and healthcare leadership development.",
       bgGradient: "from-pink-600 to-blue-600",
       icon: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/boxImg_nursing.jpg",
@@ -321,6 +358,7 @@ const AcademicPrograms = () => {
     {
       id: 11,
       title: "Physiotherapy",
+      apply:"https://lnctu.ac.in/master-physiotherapy-mpt-course/",
       description: "Comprehensive rehabilitation education with modern equipment, clinical practice, and sports medicine specialization.",
       bgGradient: "from-teal-600 to-blue-700",
       icon: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/boxImg_physiotheropy.jpg",
@@ -340,6 +378,7 @@ const AcademicPrograms = () => {
     {
       id: 12,
       title: "Hotel Management",
+      apply:"https://lnctu.ac.in/school-of-hotel-management/",
       description: "Hospitality education with practical training, industry exposure, and culinary arts specialization.",
       bgGradient: "from-orange-600 to-red-600",
       icon: "https://th.bing.com/th/id/OIP.fRgoSitinh2pUa1xOA8rjAHaEU?rs=1&pid=ImgDetMain",
@@ -376,7 +415,7 @@ const AcademicPrograms = () => {
             </div>
             <div className="flex items-center gap-4">
               <img src="" alt="" />
-              <div className="text-5xl">{program.icon}</div>
+              <div className="text-5xl"></div>
               <div>
                 <h2 className="text-3xl font-bold mb-2">{program.title}</h2>
                 <div className="flex flex-wrap gap-4 text-sm">
@@ -416,12 +455,13 @@ const AcademicPrograms = () => {
             </div>
             
             <div className="flex gap-4">
-              <div className={`flex-1 bg-gradient-to-r ${program.bgGradient} text-white px-6 py-3 rounded-xl font-medium hover:shadow-lg transition-all cursor-pointer text-center`}>
-                Apply Now
-              </div>
-              <div className="flex-1 border-2 border-stone-300 text-stone-700 px-6 py-3 rounded-xl font-medium hover:bg-stone-50 transition-all cursor-pointer text-center">
-                Download Brochure
-              </div>
+              
+                <a className="flex-1 bg-blue-100 text-blue-700 px-6 py-3 rounded-xl font-medium hover:shadow-lg transition-all cursor-pointer text-center" href={program.apply}>  Apply Now</a>
+              
+             
+              
+                <a className="flex-1 border-2 border-stone-300 text-stone-700 px-6 py-3 rounded-xl font-medium hover:bg-stone-50 transition-all cursor-pointer text-center" href="https://lnct.ac.in/wp-content/uploads/2025/03/LNCT-Brochure.pdf">Download Brochure</a>
+           
             </div>
           </div>
         </div>
@@ -515,9 +555,8 @@ const AcademicPrograms = () => {
                     </span>
                     <ArrowRight className="ml-2 w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" />
                   </div>
-                  <div className="px-4 py-2 bg-blue-500 text-white text-sm rounded-lg font-medium hover:shadow-lg transition-all cursor-pointer">
-                    Apply
-                  </div>
+                 
+                  <a className="px-4 py-2 bg-blue-100 text-white text-sm rounded-lg font-medium hover:shadow-lg transition-all cursor-pointer" href={program.apply}>Apply</a>
                 </div>
               </div>
             </div>
@@ -570,15 +609,17 @@ const AcademicPrograms = () => {
                 Join thousands of students who have transformed their lives through our world-class education programs.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://admissions.lnct.ac.in/">
                 <div className="group bg-white text-blue-900 hover:bg-blue-50 px-8 py-4 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 cursor-pointer">
                   <span className="flex items-center justify-center">
                     Apply Now
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </span>
-                </div>
+                </div></a>
+                <a href="https://lnct.ac.in/wp-content/uploads/2025/03/LNCT-Brochure.pdf">
                 <div className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-xl font-bold transition-all duration-300 cursor-pointer">
                   Download Brochure
-                </div>
+                </div></a>
               </div>
             </div>
           </div>
@@ -614,6 +655,7 @@ const ProgramsPage = () => {
           <AIChatbox />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
