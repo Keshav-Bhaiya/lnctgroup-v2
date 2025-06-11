@@ -1,7 +1,8 @@
+
 import React, { useEffect, useState } from 'react';
 import { ArrowRight, BookOpen, Users, Award, Globe, ChevronDown, X, Calendar, MapPin, Clock } from 'lucide-react';
-import AIChatbox from "../AIChatbox";
-import Footer from "../Footer";
+import AIChatbox from '../AIChatbox';
+import Footer from '../Footer';
 
 const LNCTHero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -36,12 +37,12 @@ const scrollToPrograms = () => {
 };
   
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-slate-100 to-stone-100 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-orange-50 to-yellow-100 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-stone-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-500"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-orange-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-orange-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-500"></div>
         
         {/* Floating particles */}
         <div className="absolute inset-0 pointer-events-none">
@@ -52,7 +53,7 @@ const scrollToPrograms = () => {
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
-                background: 'linear-gradient(135deg, #3b82f6 60%, #94a3b8 100%)',
+                background: 'linear-gradient(135deg, #f97316 60%, #fbbf24 100%)',
                 animationDelay: `${Math.random() * 2}s`,
                 animationDuration: `${2 + Math.random() * 3}s`
               }}
@@ -64,33 +65,33 @@ const scrollToPrograms = () => {
       <div className="container mx-auto px-6 py-12 flex items-center justify-between min-h-screen relative z-10">
         {/* Left Content Section */}
         <div className={`w-1/2 pr-12 transform transition-all duration-1000 ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'}`}>
-          <div className="inline-block px-4 py-2 bg-gradient-to-r from-blue-600 to-slate-500 rounded-full text-white text-sm font-medium mb-6 shadow-md">
+          <div className="inline-block px-4 py-2 bg-gradient-to-r from-orange-600 to-yellow-500 rounded-full text-white text-sm font-medium mb-6 shadow-md">
             🎓 Excellence in Education Since 1994
           </div>
           
           <h1 className="text-6xl font-bold mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-blue-700 via-slate-600 to-stone-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-orange-700 via-yellow-600 to-orange-500 bg-clip-text text-transparent">
               LNCT Group
             </span>
             <br />
-            <span className="text-stone-800">of Institutions</span>
+            <span className="text-gray-800">of Institutions</span>
           </h1>
           
-          <p className="text-lg text-stone-700 mb-8 leading-relaxed">
+          <p className="text-lg text-gray-700 mb-8 leading-relaxed">
             Empowering minds, shaping futures, and creating tomorrow's innovators through world-class education and cutting-edge research.
           </p>
           
           <div className="flex flex-col items-center justify-center sm:flex-row gap-4">
             <div 
             onClick={scrollToPrograms}
-            className="group bg-gradient-to-r from-blue-600 to-slate-600 hover:from-blue-700 hover:to-slate-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1 cursor-pointer"
+            className="group bg-gradient-to-r from-orange-600 to-yellow-600 hover:from-orange-700 hover:to-yellow-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1 cursor-pointer"
             >
           <span className="flex items-center justify-center">
           Explore Programs
           <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </span>
           </div>
-            <div className="border-2 border-blue-400 text-blue-600 hover:bg-blue-400 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300">
+            <div className="border-2 border-orange-400 text-orange-600 hover:bg-orange-100 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300">
               <a className='' href="https://tour.lnct.ac.in/LNCT/">Virtual Tour</a>
             </div>
           </div>
@@ -103,8 +104,8 @@ const scrollToPrograms = () => {
               { number: "15+", label: "Programs" }
             ].map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-2xl font-bold text-blue-600">{stat.number}</div>
-                <div className="text-stone-600 text-sm">{stat.label}</div>
+                <div className="text-2xl font-bold text-orange-600">{stat.number}</div>
+                <div className="text-gray-600 text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -115,11 +116,11 @@ const scrollToPrograms = () => {
         <div className={`w-1/2 transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-12 opacity-0'}`}>
           <div className="relative">
             
-            <div className="bg-gradient-to-br from-blue-50/80 to-stone-50/60 backdrop-blur-lg rounded-3xl shadow-2xl overflow-hidden border border-blue-200">
+            <div className="bg-gradient-to-br from-orange-50/80 to-yellow-50/60 backdrop-blur-lg rounded-3xl shadow-2xl overflow-hidden border border-orange-200">
              
               <div className="h-92 relative overflow-hidden">
         
-      <div className="tier absolute inset-0 bg-gradient-to-b from-blue-200 via-slate-300 to-stone-300">
+      <div className="tier absolute inset-0 bg-gradient-to-b from-orange-200 via-yellow-300 to-orange-300">
   {images.map((img, index) => (
     <img
       key={index}
@@ -136,8 +137,8 @@ const scrollToPrograms = () => {
               </div>
             </div>
         
-            <div className="absolute -top-6 -right-6 w-16 h-16 bg-gradient-to-br from-blue-400 to-slate-400 rounded-full shadow-lg animate-pulse"></div>
-            <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-br from-blue-400 to-stone-400 rounded-full shadow-lg animate-bounce"></div>
+            <div className="absolute -top-6 -right-6 w-16 h-16 bg-gradient-to-br from-orange-400 to-yellow-400 rounded-full shadow-lg animate-pulse"></div>
+            <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-br from-orange-400 to-yellow-400 rounded-full shadow-lg animate-bounce"></div>
           </div>
         </div>
       </div>
@@ -170,9 +171,9 @@ const AcademicPrograms = () => {
   const programs = [
     {
       id: 1,
-      title: "Engineering & Technol0gy",
-      description: "Cutting-edge programs across multiple engineering disciplines with state-of-the-art laboratories and industry partnerships.",
-      bgGradient: "from-blue-500 to-slate-500",
+      title: "Engineering & Technology",
+      description: "Programs across multiple engineering disciplines with state-of-the-art laboratories and industry partnerships.",
+      bgGradient: "from-orange-500 to-yellow-500",
       icon: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/0014_Background.jpg",
       stats: "15+ Specializations",
       duration: "4 Years",
@@ -192,7 +193,7 @@ const AcademicPrograms = () => {
       id: 2,
       title: "Medical",
       description: "Comprehensive medical education with hands-on clinical experience and advanced healthcare training facilities.",
-      bgGradient: "from-slate-500 to-blue-600",
+      bgGradient: "from-yellow-500 to-orange-600",
       icon: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/0005_Medicine.jpg",
       stats: "500+ Beds Hospital",
       duration: "5.5 Years",
@@ -212,7 +213,7 @@ const AcademicPrograms = () => {
       id: 3,
       title: "Dentistry",
       description: "Premier dental education with modern clinics, specialized training, and patient care excellence.",
-      bgGradient: "from-blue-600 to-stone-600",
+      bgGradient: "from-orange-600 to-yellow-600",
       icon: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/0009_Dentistry.jpg",
       stats: "Modern Dental Clinic",
       duration: "5 Years",
@@ -232,7 +233,7 @@ const AcademicPrograms = () => {
       id: 4,
       title: "Management",
       description: "Business programs focusing on leadership, entrepreneurship, and strategic management with global perspectives.",
-      bgGradient: "from-stone-600 to-blue-700",
+      bgGradient: "from-yellow-600 to-orange-700",
       icon: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/0006_Management.jpg",
       stats: "100% Placement",
       duration: "2 Years",
@@ -252,7 +253,7 @@ const AcademicPrograms = () => {
       id: 5,
       title: "Law",
       description: "Comprehensive legal education with moot courts, legal clinics, and expertise in constitutional and corporate law.",
-      bgGradient: "from-slate-600 to-stone-700",
+      bgGradient: "from-orange-600 to-yellow-700",
       icon: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/0007_LAW-1.jpg",
       stats: "Moot Court Available",
       duration: "5 Years",
@@ -273,7 +274,7 @@ const AcademicPrograms = () => {
       title: "Architecture",
       apply: "https://lnctu.ac.in/school-of-architecture/",
       description: "Creative architectural programs with design studios, workshop facilities, and sustainable building practices.",
-      bgGradient: "from-blue-700 to-slate-700",
+      bgGradient: "from-orange-700 to-yellow-700",
       icon: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/0010_Architecture.jpg",
       stats: "Design Studios",
       duration: "5 Years",
@@ -294,7 +295,7 @@ const AcademicPrograms = () => {
       title: "Science & Humanities",
       apply: "https://lnct.ac.in/lnct-and-science/",
       description: "Diverse programs in pure sciences and humanities with research opportunities and interdisciplinary approach.",
-      bgGradient: "from-stone-700 to-blue-800",
+      bgGradient: "from-yellow-700 to-orange-800",
       icon: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/boxImg_science_humanities.jpg",
       stats: "Research Labs",
       duration: "3-4 Years",
@@ -314,7 +315,7 @@ const AcademicPrograms = () => {
       title: "Agriculture Sciences",
       apply: "https://lnctu.ac.in/school-of-agriculture/",
       description: "Practical agricultural education with experimental farms, modern techniques, and sustainable farming practices.",
-      bgGradient: "from-green-600 to-blue-600",
+      bgGradient: "from-green-600 to-orange-600",
       icon: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/0011_Agriculture-Sciences.jpg",
       stats: "50+ Acre Farm",
       duration: "4 Years",
@@ -334,7 +335,7 @@ const AcademicPrograms = () => {
       title: "Pharmacy",
       apply:"https://lnct.ac.in/lnct-pharmacy/",
       description: "Comprehensive pharmaceutical education with modern labs, drug development facilities, and industry connections.",
-      bgGradient: "from-slate-700 to-stone-800",
+      bgGradient: "from-orange-700 to-yellow-800",
       icon: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/boxImg_pharmacy.jpg",
       stats: "Modern Lab Setup",
       duration: "4 Years",
@@ -354,7 +355,7 @@ const AcademicPrograms = () => {
       title: "Nursing",
       apply:"https://lnctu.ac.in/school-of-nursing/",
       description: "Professional nursing education with clinical training, patient care excellence, and healthcare leadership development.",
-      bgGradient: "from-pink-600 to-blue-600",
+      bgGradient: "from-pink-600 to-orange-600",
       icon: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/boxImg_nursing.jpg",
       stats: "Clinical Training",
       duration: "4 Years",
@@ -374,7 +375,7 @@ const AcademicPrograms = () => {
       title: "Physiotherapy",
       apply:"https://lnctu.ac.in/master-physiotherapy-mpt-course/",
       description: "Comprehensive rehabilitation education with modern equipment, clinical practice, and sports medicine specialization.",
-      bgGradient: "from-teal-600 to-blue-700",
+      bgGradient: "from-teal-600 to-orange-700",
       icon: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/boxImg_physiotheropy.jpg",
       stats: "Rehab Center",
       duration: "4.5 Years",
@@ -452,16 +453,16 @@ const AcademicPrograms = () => {
           
           <div className="p-6">
             <div className="mb-6">
-              <h3 className="text-xl font-bold text-stone-800 mb-3">Program Overview</h3>
-              <p className="text-stone-600 leading-relaxed">{program.fullDescription}</p>
+              <h3 className="text-xl font-bold text-gray-800 mb-3">Program Overview</h3>
+              <p className="text-gray-600 leading-relaxed">{program.fullDescription}</p>
             </div>
             
             <div className="mb-6">
-              <h3 className="text-xl font-bold text-stone-800 mb-3">Key Highlights</h3>
+              <h3 className="text-xl font-bold text-gray-800 mb-3">Key Highlights</h3>
               <ul className="space-y-2">
                 {program.highlights.map((highlight, index) => (
-                  <li key={index} className="flex items-start gap-2 text-stone-600">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <li key={index} className="flex items-start gap-2 text-gray-600">
+                    <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
                     {highlight}
                   </li>
                 ))}
@@ -470,11 +471,11 @@ const AcademicPrograms = () => {
             
             <div className="flex gap-4">
               
-                <a className="flex-1 bg-blue-100 text-blue-700 px-6 py-3 rounded-xl font-medium hover:shadow-lg transition-all cursor-pointer text-center" href={program.apply}>  Apply Now</a>
+                <a className="flex-1 bg-orange-100 text-orange-700 px-6 py-3 rounded-xl font-medium hover:shadow-lg transition-all cursor-pointer text-center" href={program.apply}>  Apply Now</a>
               
              
               
-                <a className="flex-1 border-2 border-stone-300 text-stone-700 px-6 py-3 rounded-xl font-medium hover:bg-stone-50 transition-all cursor-pointer text-center" href="https://lnct.ac.in/wp-content/uploads/2025/03/LNCT-Brochure.pdf">Download Brochure</a>
+                <a className="flex-1 border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-xl font-medium hover:bg-gray-50 transition-all cursor-pointer text-center" href="https://lnct.ac.in/wp-content/uploads/2025/03/LNCT-Brochure.pdf">Download Brochure</a>
            
             </div>
           </div>
@@ -484,18 +485,18 @@ const AcademicPrograms = () => {
   };
 
   return (
-    <div id="programs-section" className="bg-gradient-to-br from-blue-25 via-slate-50 to-stone-50 min-h-screen py-20">
+    <div id="programs-section" className="bg-gradient-to-br from-blue-50 via-orange-50 to-yellow-100 min-h-screen py-20">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header Section */}
         <div className={`text-center mb-16 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
-          <div className="inline-block px-6 py-2 bg-gradient-to-r from-blue-600 to-slate-600 rounded-full text-white text-sm font-medium mb-6">
+          <div className="inline-block px-6 py-2 bg-gradient-to-r from-orange-600 to-yellow-600 rounded-full text-white text-sm font-medium mb-6">
             ✨ Academic Excellence
           </div>
-          <h1 className="text-5xl font-bold text-stone-800 mb-4">
+          <h1 className="text-5xl font-bold text-gray-800 mb-4">
             Discover Your
-            <span className="bg-gradient-to-r from-blue-600 to-slate-600 bg-clip-text text-transparent"> Perfect Program</span>
+            <span className="bg-gradient-to-r from-orange-600 to-yellow-600 bg-clip-text text-transparent"> Perfect Program</span>
           </h1>
-          <p className="text-xl text-stone-700 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
             Choose from our comprehensive range of world-class programs designed to shape tomorrow's leaders and innovators.
           </p>
         </div>
@@ -505,7 +506,7 @@ const AcademicPrograms = () => {
           {visiblePrograms.map((program, index) => (
             <div
               key={program.id}
-              className={`group relative bg-gradient-to-br from-blue-50 to-stone-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-blue-200 ${
+              className={`group relative bg-gradient-to-br from-orange-50 to-yellow-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-orange-200 ${
                 isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
@@ -516,7 +517,7 @@ const AcademicPrograms = () => {
               <div className={`absolute inset-0 bg-gradient-to-br ${program.bgGradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
               
               {/* Image Section */}
-              <div className="relative h-48 overflow-hidden bg-gradient-to-br from-blue-100 to-stone-100">
+              <div className="relative h-48 overflow-hidden bg-gradient-to-br from-orange-100 to-yellow-100">
                 <div className={`absolute inset-0 bg-gradient-to-br ${program.bgGradient} opacity-15`}></div>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className={`text-6xl transform transition-all duration-300 ${hoveredProgram === program.id ? 'scale-105 ' : 'scale-100'}`}>
@@ -530,7 +531,7 @@ const AcademicPrograms = () => {
                   {[...Array(6)].map((_, i) => (
                     <div
                       key={i}
-                      className={`absolute w-2 h-2 bg-blue-400 rounded-full transition-all duration-1000 ${
+                      className={`absolute w-2 h-2 bg-orange-400 rounded-full transition-all duration-1000 ${
                         hoveredProgram === program.id ? 'opacity-60 scale-100' : 'opacity-0 scale-0'
                       }`}
                       style={{
@@ -546,7 +547,7 @@ const AcademicPrograms = () => {
               {/* Content */}
               <div className="p-6 relative z-10">
                 <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-xl font-bold text-stone-800 group-hover:text-blue-700 transition-colors">
+                  <h3 className="text-xl font-bold text-gray-800 group-hover:text-orange-700 transition-colors">
                     {program.title}
                   </h3>
                   <div className={`px-3 py-1 bg-gradient-to-r ${program.bgGradient} text-white text-xs rounded-full font-medium`}>
@@ -554,7 +555,7 @@ const AcademicPrograms = () => {
                   </div>
                 </div>
                 
-                <p className="text-stone-600 text-sm leading-relaxed mb-6">
+                <p className="text-gray-600 text-sm leading-relaxed mb-6">
                   {program.description}
                 </p>
                 
@@ -562,7 +563,7 @@ const AcademicPrograms = () => {
                 <div className="flex gap-2">
                   <div
                     onClick={() => setSelectedProgram(program)}
-                    className="flex-1 group/btn inline-flex items-center justify-center text-blue-700 hover:text-blue-800 font-medium text-sm transition-all duration-200 bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-lg cursor-pointer"
+                    className="flex-1 group/btn inline-flex items-center justify-center text-orange-700 hover:text-orange-800 font-medium text-sm transition-all duration-200 bg-orange-50 hover:bg-orange-100 px-4 py-2 rounded-lg cursor-pointer"
                   >
                     <span className="relative">
                       View More
@@ -570,7 +571,7 @@ const AcademicPrograms = () => {
                     <ArrowRight className="ml-2 w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" />
                   </div>
                  
-                  <a className="px-4 py-2 bg-blue-100 text-white text-sm rounded-lg font-medium hover:shadow-lg transition-all cursor-pointer" href={program.apply}>Apply</a>
+                  <a className="px-4 py-2 bg-orange-100 text-white text-sm rounded-lg font-medium hover:shadow-lg transition-all cursor-pointer" href={program.apply}>Apply</a>
                 </div>
               </div>
             </div>
@@ -590,7 +591,7 @@ const AcademicPrograms = () => {
               </span>
             </button>
           </div>
-        )}
+        )};
 
         {/* View Less Button */}
         {showAllPrograms && (
@@ -605,7 +606,7 @@ const AcademicPrograms = () => {
               </span>
             </button>
           </div>
-        )}
+        )};
 
         {/* CTA Section */}
         <div className={`mt-20 transform transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
@@ -646,7 +647,7 @@ const AcademicPrograms = () => {
           program={selectedProgram}
           onClose={() => setSelectedProgram(null)}
         />
-      )}
+      )};
     </div>
   );
 };
