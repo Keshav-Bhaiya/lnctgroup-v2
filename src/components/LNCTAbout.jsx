@@ -48,30 +48,32 @@ const LNCTAbout = () => {
           </div>
 
           {/* Right Side - Timeline */}
-          <div className="relative pl-8">
+          <div className="relative">
             {/* Vertical Line */}
-            <div className="absolute left-3 top-0 bottom-0 w-0.5 bg-orange-200"></div>
+            <div className="absolute left-6 top-4 bottom-4 w-0.5 bg-orange-200"></div>
 
             {/* Timeline Events */}
-            {[
-              { year: '1994', text: 'Establishment of LNCT campus in Bhopal', icon: <Building2 /> },
-              { year: '2003', text: 'Expansion with LNCT University', icon: <GraduationCap /> },
-              { year: '2010', text: 'Received A+ NAAC Accreditation', icon: <Award /> },
-              { year: '2020', text: 'Launch of Innovation & Incubation Hub', icon: <Lightbulb /> },
-            ].map((event, idx) => (
-              <div key={idx} className="flex items-start gap-4 relative mb-8 group">
-                {/* Icon */}
-                <div className="bg-orange-500 rounded-full p-3 text-white shadow-md transform group-hover:scale-110 transition">
-                  {React.cloneElement(event.icon, { className: 'w-5 h-5' })}
-                </div>
+            <div className="space-y-8">
+              {[
+                { year: '1994', text: 'Establishment of LNCT campus in Bhopal', icon: <Building2 /> },
+                { year: '2003', text: 'Expansion with LNCT University', icon: <GraduationCap /> },
+                { year: '2010', text: 'Received A+ NAAC Accreditation', icon: <Award /> },
+                { year: '2020', text: 'Launch of Innovation & Incubation Hub', icon: <Lightbulb /> },
+              ].map((event, idx) => (
+                <div key={idx} className="relative flex items-center group">
+                  {/* Icon */}
+                  <div className="relative z-10 bg-orange-500 rounded-full p-3 text-white shadow-md transform group-hover:scale-110 transition-transform duration-300">
+                    {React.cloneElement(event.icon, { className: 'w-5 h-5' })}
+                  </div>
 
-                {/* Year and Event Text stacked vertically */}
-                <div className=''>
-                  <div className="text-sm  font-semibold text-gray-700">{event.year}</div>
-                  <div className="text-gray-600 text-sm mt-1">{event.text}</div>
+                  {/* Year and Event Text */}
+                  <div className="ml-6 flex-1">
+                    <div className="text-sm font-bold text-orange-600 mb-1">{event.year}</div>
+                    <div className="text-gray-700 text-base leading-relaxed">{event.text}</div>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
