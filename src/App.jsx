@@ -1,19 +1,16 @@
-import { useState } from 'react'
-import { Routes, Route } from 'react-router-dom'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import Nav from './components/Nav'
-import './App.css'
-import LNCTHero from './components/LNCTHero'
-import LNCTAbout from './components/LNCTAbout'
-import CampusShowcase from './components/CampusShowcase'
-import PlacementsOverview from './components/PlacementsOverview'
-import StartupsInnovationLabs from './components/StartupsInnovationLabs'
-import LNCTSections from './components/LNCTSections'
-import ContactCampusLocations from './components/ContactCampusLocations'
-import Footer from './components/Footer'
-import InstitutionsPage from '../src/components/pages/InstitutionsPage '
-import ProgramsPage from '../src/components/pages/ProgramsPage'
+import { Routes, Route } from "react-router-dom"
+import Nav from "./components/Nav"
+import "./App.css"
+import LNCTHero from "./components/LNCTHero"
+import LNCTAbout from "./components/LNCTAbout"
+import CampusShowcase from "./components/CampusShowcase"
+import PlacementsOverview from "./components/PlacementsOverview"
+import StartupsInnovationLabs from "./components/StartupsInnovationLabs"
+import LNCTSections from "./components/LNCTSections"
+import ContactCampusLocations from "./components/ContactCampusLocations"
+import Footer from "./components/Footer"
+import InstitutionsPage from "../src/components/pages/InstitutionsPage "
+import ProgramsPage from "../src/components/pages/ProgramsPage"
 
 const HomePage = () => (
   <>
@@ -26,17 +23,19 @@ const HomePage = () => (
     <ContactCampusLocations />
     <Footer />
   </>
-);
+)
 
 function App() {
   return (
-    <div className="w-screen ml-[-140px] min-h-screen overflow-x-hidden">
+    <div className="min-h-screen ">
       <Nav />
-      <Routes>
-        <Route path="/" element={<HomePage/>} />
-        <Route path="/campuses" element={<InstitutionsPage />} />
-        <Route path="/departments" element={<ProgramsPage />} />
-      </Routes>
+      <main className="w-full">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/campuses" element={<InstitutionsPage />} />
+          <Route path="/departments" element={<ProgramsPage />} />
+        </Routes>
+      </main>
     </div>
   )
 }
