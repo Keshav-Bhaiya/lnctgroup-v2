@@ -4,7 +4,7 @@ import AIChatbox from './AIChatbox';
 
 const LNCTAbout = () => {
   return (
-    <div id="lnctabout" className="bg-gradient-to-br from-blue-50 via-orange-50 to-yellow-100 py-20 px-6 min-h-screen">
+    <div id="lnctabout" className="bg-gradient-to-br mt-[-25px] from-blue-50 via-orange-50 to-yellow-100 py-20 px-6 min-h-screen">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-14">
