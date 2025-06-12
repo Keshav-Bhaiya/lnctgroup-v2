@@ -43,23 +43,22 @@ const LNCTHero = () => {
                 </p>
                 <div className="flex flex-wrap gap-4 justify-center">
                   <a href="/campuses">
-                    <div className="bg-gradient-to-r from-orange-600 to-yellow-600 hover:from-orange-700 hover:to-yellow-700 text-white px-6 py-3 rounded-full font-medium text-base transition-all duration-200 flex items-center gap-2">
+                    <div className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-medium text-base transition-all duration-200 flex items-center gap-2">
                       <Building2 size={18} />
                       Explore All Campuses
                     </div>
                   </a>
                   <a href="https://admissions.lnct.ac.in/">
-                    <div className="hover:bg-gray-500 text-white px-6 py-3 rounded-full font-medium text-base transition-all duration-200 flex items-center gap-2">
+                    <div className="bg-white hover:bg-gray-50 text-red-400 px-6 py-3 rounded-full font-medium text-base transition-all duration-200 flex items-center gap-2">
                       <Edit size={18} />
                       Apply Now
                     </div>
                   </a>
-                  <a href='/departments'>
-                  <div className="bg-gradient-to-r from-orange-600 to-yellow-600 hover:from-orange-700 hover:to-yellow-700 text-white px-6 py-3 rounded-full font-medium text-base transition-all duration-200 flex items-center gap-2">
+                  <div className="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-full font-medium text-base transition-all duration-200 flex items-center gap-2">
                     <Briefcase size={18} />
-                     See Departments
+                    <a href="/departments">See Departments</a>
+                    
                   </div>
-                  </a>
                 </div>
               </div>
             </div>

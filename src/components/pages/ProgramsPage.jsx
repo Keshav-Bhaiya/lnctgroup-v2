@@ -485,7 +485,7 @@ const AcademicPrograms = () => {
   };
 
   return (
-    <div id="programs-section" className="bg-gradient-to-br from-blue-50 via-orange-50 to-yellow-100 min-h-screen py-20">
+    <div id="programs-section" className="bg-gradient-to-br from-blue-100 via-orange-50 to-blue-400 min-h-screen py-20">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header Section */}
         <div className={`text-center mb-16 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
@@ -506,7 +506,7 @@ const AcademicPrograms = () => {
           {visiblePrograms.map((program, index) => (
             <div
               key={program.id}
-              className={`group relative bg-gradient-to-br from-orange-50 to-yellow-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-orange-200 ${
+              className={`group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-orange-200 ${
                 isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
@@ -547,7 +547,7 @@ const AcademicPrograms = () => {
               {/* Content */}
               <div className="p-6 relative z-10">
                 <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-xl font-bold text-gray-800 group-hover:text-orange-700 transition-colors">
+                  <h3 className="text-xl font-bold text-gray-800 group-hover:text-blue-700 transition-colors">
                     {program.title}
                   </h3>
                   <div className={`px-3 py-1 bg-gradient-to-r ${program.bgGradient} text-white text-xs rounded-full font-medium`}>

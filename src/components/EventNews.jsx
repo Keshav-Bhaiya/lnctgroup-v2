@@ -148,11 +148,13 @@ const EventsNews = () => {
 
         {/* View All Events Button */}
         <div className="text-center">
+          <a href="https://lnct.ac.in/recent-events/">
           <div className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-3 py-3 rounded-2xl font-semibold text-lg shadow-lg shadow-orange-200 hover:shadow-xl hover:shadow-orange-300 transform hover:scale-105 transition-all duration-300 group">
             <Calendar className="w-5 h-5" />
             View All Events
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
           </div>
+          </a>
         </div>
 
         {/* Floating Background Elements */}
