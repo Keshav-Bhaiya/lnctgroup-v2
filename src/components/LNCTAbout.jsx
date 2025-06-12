@@ -66,8 +66,8 @@ const LNCTAbout = () => {
                 </div>
 
                 {/* Year and Event Text stacked vertically */}
-                <div>
-                  <div className="text-sm font-semibold text-gray-700">{event.year}</div>
+                <div className=''>
+                  <div className="text-sm  font-semibold text-gray-700">{event.year}</div>
                   <div className="text-gray-600 text-sm mt-1">{event.text}</div>
                 </div>
               </div>
