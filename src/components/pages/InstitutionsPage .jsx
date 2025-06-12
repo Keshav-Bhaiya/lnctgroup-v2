@@ -3,6 +3,7 @@ import { ChevronDown, MapPin, Award, Users, GraduationCap, Building, Search, Arr
 import AIChatbox from "../AIChatbox" 
 import Footer from "../Footer";
 import EnhancedCampusNetwork from '../EnhancedCampusNetwork';
+import EventsNews from '../EventNews';
 
 const LNCTInstitutionsPage = () => {
   const [selectedFilter, setSelectedFilter] = useState('All');
@@ -518,6 +519,9 @@ const LNCTInstitutionsPage = () => {
         </div>
         
       </div>
+      <div>
+         <EventsNews />
+      </div>
         <div className={`mt-20 px-9 mx-auto transform transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
           <div className="bg-gradient-to-r from-blue-900 to-stone-900 rounded-3xl shadow-2xl p-12 text-center relative overflow-hidden">
             {/* Background decoration */}
@@ -549,7 +553,7 @@ const LNCTInstitutionsPage = () => {
           </div>
         </div>
         <br />
-
+       
       <Footer />
     </div>
   );
