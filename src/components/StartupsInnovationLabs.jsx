@@ -107,7 +107,7 @@ const StartupsInnovationLabs = () => {
 
               
                 <a className='' href="https://lnct.ac.in/kalchuri-lnct-group-incubation-centre/">
-                <button className='bg-orange-500 mr-18 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-medium'>
+                <button className='mr-18 bg-gradient-to-r from-orange-600 to-yellow-600 hover:from-orange-700 hover:to-yellow-700 text-white px-6 py-3 rounded-lg font-medium'>
                   Join Our Incubation Center
                 </button>
                 </a> 

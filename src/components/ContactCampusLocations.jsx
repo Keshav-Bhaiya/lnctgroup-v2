@@ -256,7 +256,7 @@ const ContactCampusLocations = () => {
         <div className="mt-12 text-center">
           <div className="bg-white rounded-lg shadow-lg p-8">
             <h3 className="text-2xl font-bold text-gray-800 mb-4">
-              Ready to Start Your Journey?
+              Ready to Shape Your Future?
             </h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
               Join thousands of students who have chosen LNCT for their higher education. 

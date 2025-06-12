@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { ChevronDown, MapPin, Award, Users, GraduationCap, Building, Search, ArrowRight, BookOpen, Star, Globe, Phone, Mail } from 'lucide-react';
 import AIChatbox from "../AIChatbox" 
 import Footer from "../Footer";
+import EnhancedCampusNetwork from '../EnhancedCampusNetwork';
 
 const LNCTInstitutionsPage = () => {
   const [selectedFilter, setSelectedFilter] = useState('All');
@@ -323,7 +324,7 @@ const LNCTInstitutionsPage = () => {
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             <a href=" https://tour.lnct.ac.in/LNCT/">
-            <button className="group bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-5 rounded-full font-semibold text-lg hover:bg-white/20 transition-all duration-300 shadow-xl flex items-center gap-3">
+            <button className=" border-orange-400 text-white hover:bg-orange-100 hover:text-white px-10 py-5 rounded-full font-semibold text-lg  transition-all duration-300 shadow-xl flex items-center gap-3">
               <Globe className="w-6 h-6" />
               Virtual Tour
               <ChevronDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
@@ -455,7 +456,7 @@ const LNCTInstitutionsPage = () => {
             <div className="text-center mt-16" data-scroll data-scroll-speed="0.3">
               <button
                 onClick={handleViewAllInstitutions}
-                className="group bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 hover:from-blue-500 hover:to-purple-700 text-white px-12 py-5 rounded-full font-bold text-lg shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105 flex items-center gap-3 mx-auto"
+                className="group bg-gradient-to-r from-orange-600 to-yellow-600 hover:from-orange-700 hover:to-yellow-700 text-white px-12 py-5 rounded-full font-bold text-lg shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105 flex items-center gap-3 mx-auto"
               >
                 <Building className="w-6 h-6" />
                 View All Campuses
@@ -467,87 +468,10 @@ const LNCTInstitutionsPage = () => {
       </section>
 
       {/* Enhanced Campus Locations */}
-      <section className="py-20 px-4 bg-gradient-to-br from-blue-900 via-purple-900 to-blue-800 text-white relative overflow-hidden" data-scroll-section>
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-          backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")"          }}></div>
-        </div>
-
-        <div className="max-w-7xl mx-auto relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16" data-scroll data-scroll-speed="1">
-            Our <span className="text-orange-400">Campus Network</span>
-          </h2>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8" data-scroll data-scroll-speed="0.5">
-              <p className="text-xl text-blue-100 leading-relaxed">
-                LNCT Group has established a comprehensive presence across Madhya Pradesh 
-                with strategically located campuses in key educational hubs.
-              </p>
-              
-              <div className="space-y-6">
-                {campusLocations.map((location, index) => (
-                  <div key={index} className="group p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300" data-scroll data-scroll-speed={0.2 * (index + 1)}>
-                    <div className="flex items-center gap-4 mb-3">
-                      <div className={`w-4 h-4 rounded-full ${location.color.replace('text', 'bg')} animate-pulse`}></div>
-                      <h3 className={`font-bold text-xl ${location.color}`}>
-                        {location.region}
-                      </h3>
-                      <span className="ml-auto bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                        {location.count} campuses
-                      </span>
-                    </div>
-                    <p className="text-blue-100 group-hover:text-white transition-colors">
-                      {location.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            
-            {/* Interactive Map Placeholder */}
-            <div className="relative" data-scroll data-scroll-speed="-0.5">
-              <div className="w-full h-96 bg-gradient-to-br from-blue-800/50 to-purple-800/50 rounded-3xl backdrop-blur-md border border-white/20 flex items-center justify-center group hover:scale-105 transition-transform duration-500">
-                <div className="text-center">
-                  <MapPin className="w-20 h-20 text-orange-400 mx-auto mb-6 animate-bounce" />
-                  <p className="text-white text-lg font-semibold mb-4">Interactive Campus Map</p>
-                  <div className="grid grid-cols-4 gap-3 max-w-48 mx-auto">
-                    {Array.from({length: 12}, (_, i) => (
-                      <div 
-                        key={i} 
-                        className="w-3 h-3 bg-orange-400 rounded-full animate-pulse"
-                        style={{ animationDelay: `${i * 0.2}s` }}
-                      ></div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <EnhancedCampusNetwork/>
 
       {/* Enhanced Statistics */}
-      <section className="py-20 px-4 bg-white relative overflow-hidden" data-scroll-section>
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-purple-50"></div>
-        <div className="max-w-7xl mx-auto relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent" data-scroll data-scroll-speed="1">
-            LNCT Group Excellence
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center group hover:scale-110 transition-transform duration-300" data-scroll data-scroll-speed={0.3 * (index + 1)}>
-                <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300">
-                  {stat.icon && <stat.icon className="w-16 h-16 mx-auto mb-6 text-white" />}
-                  <div className="text-4xl md:text-5xl font-black mb-3 text-white">{stat.number}</div>
-                  <div className="text-blue-100 font-semibold">{stat.label}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* Enhanced Call to Action */}
       
@@ -594,7 +518,7 @@ const LNCTInstitutionsPage = () => {
         </div>
         
       </div>
-  <div className={`mt-20 px-9 mx-auto transform transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
+        <div className={`mt-20 px-9 mx-auto transform transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
           <div className="bg-gradient-to-r from-blue-900 to-stone-900 rounded-3xl shadow-2xl p-12 text-center relative overflow-hidden">
             {/* Background decoration */}
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-slate-600/20"></div>
@@ -610,14 +534,14 @@ const LNCTInstitutionsPage = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="https://admissions.lnct.ac.in/">
-                <div className="group bg-white text-blue-900 hover:bg-blue-50 px-8 py-4 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 cursor-pointer">
+                <div className="group bg-gradient-to-r from-orange-600 to-yellow-600 hover:from-orange-700 hover:to-yellow-700 text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 cursor-pointer">
                   <span className="flex items-center justify-center">
                     Apply Now
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </div></a>
                 <a href="https://lnct.ac.in/wp-content/uploads/2025/03/LNCT-Brochure.pdf">
-                <div className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-xl font-bold transition-all duration-300 cursor-pointer">
+                <div className="border-2 border-orange-400 text-orange-600 hover:bg-gray-800 hover:text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 cursor-pointer">
                   Download Brochure
                 </div></a>
               </div>

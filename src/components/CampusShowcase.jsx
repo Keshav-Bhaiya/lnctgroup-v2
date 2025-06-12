@@ -161,7 +161,7 @@ const CampusShowcase = () => {
         {/* View All Campuses Button */}
         <div className="text-center mt-16">
           <button
-            className="inline-flex items-center gap-3 bg-black hover:from-orange-700 hover:to-blue-800 text-white px-10 py-4 rounded-full font-bold text-lg shadow-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-orange-300"
+            className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-600 to-yellow-600 hover:from-orange-700 hover:to-yellow-700 text-white px-10 py-4 rounded-full font-bold text-lg shadow-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-orange-300"
             aria-label="View all campuses"
             onClick={() => navigate("/campuses")}
           >

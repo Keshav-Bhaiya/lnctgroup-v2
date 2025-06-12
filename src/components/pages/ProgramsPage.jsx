@@ -583,7 +583,7 @@ const AcademicPrograms = () => {
           <div className="text-center mt-12">
             <button
               onClick={() => setShowAllPrograms(true)}
-              className="group bg-gradient-to-r from-blue-600 to-slate-600 hover:from-blue-700 hover:to-slate-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1"
+              className="group bg-gradient-to-r from-orange-600 to-yellow-600 hover:from-orange-700 hover:to-yellow-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1"
             >
               <span className="flex items-center justify-center">
                 View More Programs
@@ -625,14 +625,14 @@ const AcademicPrograms = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="https://admissions.lnct.ac.in/">
-                <div className="group bg-white text-blue-900 hover:bg-blue-50 px-8 py-4 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 cursor-pointer">
+                <div className="group bg-gradient-to-r from-orange-600 to-yellow-600 hover:from-orange-700 hover:to-yellow-700 text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 cursor-pointer">
                   <span className="flex items-center justify-center">
                     Apply Now
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </div></a>
                 <a href="https://lnct.ac.in/wp-content/uploads/2025/03/LNCT-Brochure.pdf">
-                <div className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-xl font-bold transition-all duration-300 cursor-pointer">
+                <div className="border-2 border-orange-400 text-orange-600 hover:bg-gray-800 hover:text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 cursor-pointer">
                   Download Brochure
                 </div></a>
               </div>
