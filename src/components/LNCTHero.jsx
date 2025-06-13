@@ -14,8 +14,9 @@ const LNCTHero = ({ videoSrc }) => {
       </div>
 
       {/* Background Overlay */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#14283c99] to-[#14283c99]" />
+      <div className="absolute inset-0  -z-10">
+        <div className="absolute mb-[68px] inset-0  bg-gradient-to-b  from-[#14283c99] to-[#14283c99]" />
+        
       </div>
 
       {/* Main Content */}
@@ -39,41 +40,63 @@ const LNCTHero = ({ videoSrc }) => {
               </p>
 
               {/* Responsive Button Group */}
-              <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center items-center px-4 sm:px-0">
-                <Link to="/campuses" className="w-full sm:w-auto">
+              {/* <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center items-center px-4 sm:px-0">
+                <a href="/campuses" className="w-full sm:w-auto">
                   <div className="bg-orange-500 hover:bg-orange-600 text-white px-4 sm:px-6 py-3 rounded-full font-medium text-sm sm:text-base transition-all duration-200 flex items-center justify-center gap-2 min-w-[200px] sm:min-w-0">
                     <Building2 size={18} />
                     Explore All Campuses
                   </div>
-                </Link>
+                </a>
 
-                <a
-                  href="https://admissions.lnct.ac.in/"
-                  className="w-full sm:w-auto"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="https://admissions.lnct.ac.in/" className="w-full sm:w-auto" target="_blank" rel="noopener noreferrer">
                   <div className="bg-white hover:bg-gray-50 text-red-400 px-4 sm:px-6 py-3 rounded-full font-medium text-sm sm:text-base transition-all duration-200 flex items-center justify-center gap-2 min-w-[200px] sm:min-w-0">
                     <Edit size={18} />
                     Apply Now
                   </div>
                 </a>
 
-                <Link to="/departments" className="w-full sm:w-auto">
+                <a href="/departments" className="w-full sm:w-auto">
                   <div className="bg-gray-700 hover:bg-gray-800 text-white px-4 sm:px-6 py-3 rounded-full font-medium text-sm sm:text-base transition-all duration-200 flex items-center justify-center gap-2 min-w-[200px] sm:min-w-0">
                     <Briefcase size={18} />
                     See Departments
                   </div>
-                </Link>
-              </div>
+                </a>
+              </div> */}
+              <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center items-center px-4 sm:px-0">
+  {/* Changed from Link to="/campuses" to match your navbar implementation */}
+  <Link to="/campuses" className="w-full sm:w-auto">
+    <div className="bg-orange-500 hover:bg-orange-600 text-white px-4 sm:px-6 py-3 rounded-full font-medium text-sm sm:text-base transition-all duration-200 flex items-center justify-center gap-2 min-w-[200px] sm:min-w-0">
+      <Building2 size={18} />
+      Explore All Campuses
+    </div>
+  </Link>
+
+  {/* This external link is fine as is */}
+  <a href="https://admissions.lnct.ac.in/" className="w-full sm:w-auto" target="_blank" rel="noopener noreferrer">
+    <div className="bg-white hover:bg-gray-50 text-red-400 px-4 sm:px-6 py-3 rounded-full font-medium text-sm sm:text-base transition-all duration-200 flex items-center justify-center gap-2 min-w-[200px] sm:min-w-0">
+      <Edit size={18} />
+      Apply Now
+    </div>
+  </a>
+
+  {/* Changed from Link to="/departments" to match your navbar implementation */}
+  <Link to="/departments" className="w-full sm:w-auto">
+    <div className="bg-gray-700 hover:bg-gray-800 text-white px-4 sm:px-6 py-3 rounded-full font-medium text-sm sm:text-base transition-all duration-200 flex items-center justify-center gap-2 min-w-[200px] sm:min-w-0">
+      <Briefcase size={18} />
+      See Departments
+    </div>
+  </Link>
+</div>
             </div>
           </div>
         </div>
-        <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-20">
-          <div className="bg-blue-600 hover:bg-blue-700 text-white px-3 sm:px-4 py-2 rounded-full shadow-lg transition-all duration-200 flex items-center gap-2 text-xs sm:text-sm font-medium">
-            <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
-            <AIChatbox />
-          </div>
+      </div>
+
+      {/* Responsive Help Button */}
+      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-20">
+        <div className="bg-blue-600 hover:bg-blue-700 text-white px-3 sm:px-4 py-2 rounded-full shadow-lg transition-all duration-200 flex items-center gap-2 text-xs sm:text-sm font-medium">
+          <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+          <AIChatbox />
         </div>
       </div>
     </div>
