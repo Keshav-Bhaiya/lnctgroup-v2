@@ -1,6 +1,7 @@
 import { Building2, Edit, Briefcase } from "lucide-react"
 import video from "../assets/video.mp4"
 import AIChatbox from "./AIChatbox"
+import { Link } from "react-router-dom"
 
 const LNCTHero = () => {
   return (
@@ -39,7 +40,7 @@ const LNCTHero = () => {
               </p>
 
               {/* Responsive Button Group */}
-              <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center items-center px-4 sm:px-0">
+              {/* <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center items-center px-4 sm:px-0">
                 <a href="/campuses" className="w-full sm:w-auto">
                   <div className="bg-orange-500 hover:bg-orange-600 text-white px-4 sm:px-6 py-3 rounded-full font-medium text-sm sm:text-base transition-all duration-200 flex items-center justify-center gap-2 min-w-[200px] sm:min-w-0">
                     <Building2 size={18} />
@@ -60,7 +61,32 @@ const LNCTHero = () => {
                     See Departments
                   </div>
                 </a>
-              </div>
+              </div> */}
+              <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center items-center px-4 sm:px-0">
+  {/* Changed from Link to="/campuses" to match your navbar implementation */}
+  <Link to="/campuses" className="w-full sm:w-auto">
+    <div className="bg-orange-500 hover:bg-orange-600 text-white px-4 sm:px-6 py-3 rounded-full font-medium text-sm sm:text-base transition-all duration-200 flex items-center justify-center gap-2 min-w-[200px] sm:min-w-0">
+      <Building2 size={18} />
+      Explore All Campuses
+    </div>
+  </Link>
+
+  {/* This external link is fine as is */}
+  <a href="https://admissions.lnct.ac.in/" className="w-full sm:w-auto" target="_blank" rel="noopener noreferrer">
+    <div className="bg-white hover:bg-gray-50 text-red-400 px-4 sm:px-6 py-3 rounded-full font-medium text-sm sm:text-base transition-all duration-200 flex items-center justify-center gap-2 min-w-[200px] sm:min-w-0">
+      <Edit size={18} />
+      Apply Now
+    </div>
+  </a>
+
+  {/* Changed from Link to="/departments" to match your navbar implementation */}
+  <Link to="/departments" className="w-full sm:w-auto">
+    <div className="bg-gray-700 hover:bg-gray-800 text-white px-4 sm:px-6 py-3 rounded-full font-medium text-sm sm:text-base transition-all duration-200 flex items-center justify-center gap-2 min-w-[200px] sm:min-w-0">
+      <Briefcase size={18} />
+      See Departments
+    </div>
+  </Link>
+</div>
             </div>
           </div>
         </div>
