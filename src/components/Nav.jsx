@@ -147,7 +147,7 @@ const Header = () => {
 
           {/* Right Actions */}
           <div className="flex items-center space-x-4">
-            <div className="bg-red-600 hover:bg-blue-700 text-white px-5 py-2 rounded-full text-sm font-medium transition"
+            <div className="bg-blue-600 hover:bg-red-600 cursor-pointer text-white px-5 py-2 rounded-full text-sm font-medium transition"
               onClick={() => window.location.href = 'https://admissions.lnct.ac.in/'}
             >
               Apply Now
