@@ -100,12 +100,23 @@ const Header = () => {
     }
   };
 
+  // Function to handle logo click (same as Home)
+  const handleLogoClick = () => {
+    navigate('/');
+    setTimeout(() => {
+      window.scrollTo({ 
+        top: 0, 
+        behavior: 'smooth' 
+      });
+    }, 100);
+  };
+
   return (
     <header className=" top-0 bg-white z-99999  shadow-sm fixed  left-0 w-full ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-3 cursor-pointer" onClick={handleLogoClick}>
             <img
               className="w-32"
               src="https://www.admissionindia.net/uploads/colleges/31/logo-1.png"
