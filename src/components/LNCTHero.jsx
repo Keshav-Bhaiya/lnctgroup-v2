@@ -1,6 +1,7 @@
 import { Building2, Edit, Briefcase } from "lucide-react"
 import video from "../assets/video.mp4"
 import AIChatbox from "./AIChatbox"
+import { Link } from "react-router-dom"
 
 const LNCTHero = () => {
   return (
@@ -39,37 +40,35 @@ const LNCTHero = () => {
 
               {/* Responsive Button Group */}
               <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center items-center px-4 sm:px-0">
-                <a href="/campuses" className="w-full sm:w-auto">
+                <Link to="/campuses" className="w-full sm:w-auto">
                   <div className="bg-orange-500 hover:bg-orange-600 text-white px-4 sm:px-6 py-3 rounded-full font-medium text-sm sm:text-base transition-all duration-200 flex items-center justify-center gap-2 min-w-[200px] sm:min-w-0">
                     <Building2 size={18} />
                     Explore All Campuses
                   </div>
-                </a>
+                </Link>
 
-                <a href="https://admissions.lnct.ac.in/" className="w-full sm:w-auto">
+                <a href="https://admissions.lnct.ac.in/" className="w-full sm:w-auto" target="_blank" rel="noopener noreferrer">
                   <div className="bg-white hover:bg-gray-50 text-red-400 px-4 sm:px-6 py-3 rounded-full font-medium text-sm sm:text-base transition-all duration-200 flex items-center justify-center gap-2 min-w-[200px] sm:min-w-0">
                     <Edit size={18} />
                     Apply Now
                   </div>
                 </a>
 
-                <a href="/departments" className="w-full sm:w-auto">
+                <Link to="/departments" className="w-full sm:w-auto">
                   <div className="bg-gray-700 hover:bg-gray-800 text-white px-4 sm:px-6 py-3 rounded-full font-medium text-sm sm:text-base transition-all duration-200 flex items-center justify-center gap-2 min-w-[200px] sm:min-w-0">
                     <Briefcase size={18} />
                     See Departments
                   </div>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Responsive Help Button */}
-      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-20">
-        <div className="bg-blue-600 hover:bg-blue-700 text-white px-3 sm:px-4 py-2 rounded-full shadow-lg transition-all duration-200 flex items-center gap-2 text-xs sm:text-sm font-medium">
-          <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
-          <AIChatbox />
+        <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-20">
+          <div className="bg-blue-600 hover:bg-blue-700 text-white px-3 sm:px-4 py-2 rounded-full shadow-lg transition-all duration-200 flex items-center gap-2 text-xs sm:text-sm font-medium">
+            <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+            <AIChatbox />
+          </div>
         </div>
       </div>
     </div>
