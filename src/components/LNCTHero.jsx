@@ -7,7 +7,7 @@ const LNCTHero = () => {
     <div className="Nik relative w-full h-screen">
       {/* Background Video */}
       <div className="absolute inset-0 w-full h-full overflow-hidden -z-10">
-        <video autoPlay muted loop playsInline className="w-full h-full object-cover">
+        <video autoPlay muted loop playsInline className="w-full mt-[-68px] h-full object-cover">
           <source src={video} type="video/mp4" />
         </video>
       </div>
