@@ -5,7 +5,7 @@ import video from "../assets/video.mp4";
 
 const LNCTHero = ({ videoSrc }) => {
   return (
-    <div className="relative w-full h-screen">
+    <div className=" h-screen">
       {/* Background Video */}
       <div className="absolute inset-0 w-full h-full overflow-hidden -z-10">
         <video autoPlay muted loop playsInline className="w-full mt-[-68px] h-full object-cover">
