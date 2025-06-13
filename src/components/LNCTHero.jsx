@@ -1,15 +1,15 @@
 import { Building2, Edit, Briefcase } from "lucide-react"
-import video from "../assets/video.mp4"
-import AIChatbox from "./AIChatbox"
 import { Link } from "react-router-dom"
+import AIChatbox from "./AIChatbox"
+import video from "../assets/video.mp4";
 
-const LNCTHero = () => {
+const LNCTHero = ({ videoSrc }) => {
   return (
-    <div className="Nik relative w-full h-screen">
+    <div className="relative w-full h-screen">
       {/* Background Video */}
       <div className="absolute inset-0 w-full h-full overflow-hidden -z-10">
         <video autoPlay muted loop playsInline className="w-full mt-[-68px] h-full object-cover">
-          <source src={video} type="video/mp4" />
+          <source src={videoSrc} type="video/mp4" />
         </video>
       </div>
 
@@ -47,7 +47,12 @@ const LNCTHero = () => {
                   </div>
                 </Link>
 
-                <a href="https://admissions.lnct.ac.in/" className="w-full sm:w-auto" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://admissions.lnct.ac.in/"
+                  className="w-full sm:w-auto"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <div className="bg-white hover:bg-gray-50 text-red-400 px-4 sm:px-6 py-3 rounded-full font-medium text-sm sm:text-base transition-all duration-200 flex items-center justify-center gap-2 min-w-[200px] sm:min-w-0">
                     <Edit size={18} />
                     Apply Now

@@ -11,10 +11,11 @@ import ContactCampusLocations from "./components/ContactCampusLocations"
 import Footer from "./components/Footer"
 import InstitutionsPage from "../src/components/pages/InstitutionsPage "
 import ProgramsPage from "../src/components/pages/ProgramsPage"
+import video from "./assets/video.mp4"
 
 const HomePage = () => (
   <>
-    <LNCTHero />
+    <LNCTHero videoSrc={video} />
     <LNCTAbout />
     <CampusShowcase />
     <PlacementsOverview />
