@@ -15,7 +15,7 @@ const ContactCampusLocations = () => {
     {
       id: 1,
       name: 'LNCT Bhopal',
-      address: 'Kachhuf Nagar, Raisen Road, Bhopal, Madhya Pradesh - 462022',
+      address: 'Kalchuri Nagar, Raisen Road, Bhopal, Madhya Pradesh - 462022',
       phone: '+91 755-6185300',
       color: 'bg-blue-500',
       icon: '📍',
@@ -101,7 +101,7 @@ const ContactCampusLocations = () => {
                   </p>
                 </div>
                 <div className="flex items-center">
-                  <Phone className="w-4 h-4 text-gray-500 mr-2 flex-shrink-0" />
+                  <Phone className="w-4 h-4 text-gray-500  mr-2 flex-shrink-0" />
                   <a
                     href={`tel:${selectedCampusData?.phone}`}
                     className="text-sm text-orange-600 hover:text-orange-700 font-medium transition-colors"
@@ -230,10 +230,10 @@ const ContactCampusLocations = () => {
                 </div>
                 
                 <div className="flex items-center">
-                  <Phone className="w-4 h-4 text-gray-500 mr-2 flex-shrink-0" />
+                  <Phone className="w-4 h-4  text-gray-500 mr-2 flex-shrink-0" />
                   <a
                     href={`tel:${location.phone}`}
-                    className="text-sm text-orange-600 hover:text-orange-700 font-medium transition-colors"
+                    className="text-sm ml-5 text-orange-600 hover:text-orange-700 font-medium transition-colors"
                     onClick={(e) => e.stopPropagation()}
                   >
                     {location.phone}
