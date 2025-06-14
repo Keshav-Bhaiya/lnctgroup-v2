@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Logo and Description Section */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-white rounded mr-3 flex items-center justify-center">
+              <div className="w-12 h-12 mb-4 bg-white rounded mr-5 flex items-center justify-center">
                 <span className="">
                   <img className="w-full h-full object-cover"
                     src="https://www.admissionindia.net/uploads/colleges/31/logo-1.png"

@@ -112,14 +112,14 @@ const AIChatbox = () => {
           />
           
           {/* Chatbox */}
-          <div className="fixed inset-4 md:bottom-6 md:right-6 md:top-auto md:left-auto z-50 md:w-96 md:h-[500px] bg-white rounded-2xl shadow-2xl border border-gray-200 flex flex-col overflow-hidden">
+          <div className="fixed inset-4 md:bottom-6 md:right-6 md:top-auto md:left-auto z-50 md:w-96 md:h-[450px] bg-white rounded-2xl shadow-2xl border border-gray-200 flex flex-col overflow-hidden">
             {/* Header */}
             <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-3 md:p-4 flex items-center justify-between shrink-0">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 md:w-10 md:h-10 bg-white/20 rounded-full flex items-center justify-center">
                   <Bot size={18} className="md:w-5 md:h-5" />
                 </div>
-                <div>
+                <div className=''>
                   <h4 className="font-semibold text-lg md:text-xl">NIA</h4>
                   <p className="text-xs md:text-sm opacity-90">LNCT AI Assistant</p>
                 </div>

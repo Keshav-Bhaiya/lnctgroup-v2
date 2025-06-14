@@ -63,16 +63,16 @@ const LNCTHero = () => {
           </div>
         </div>
 
-      <div className="container mx-auto px-6 py-12 flex items-center justify-between min-h-screen relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 py-12 flex flex-col lg:flex-row items-center justify-between min-h-screen relative z-10 gap-10 lg:gap-0">
         {/* Left Content Section */}
         <div
-          className={`w-1/2 pr-12 transform transition-all duration-1000 ${isVisible ? "translate-x-0 opacity-100" : "-translate-x-12 opacity-0"}`}
+          className={`w-full lg:w-1/2 lg:pr-12 transform transition-all duration-1000 ${isVisible ? "translate-x-0 opacity-100" : "-translate-x-12 opacity-0"}`}
         >
           <div className="inline-block px-4 py-2 bg-gradient-to-r from-orange-600 to-orange-500 rounded-full text-white text-sm font-medium mb-6 shadow-md">
             🎓 Excellence in Education Since 1994
           </div>
 
-          <h1 className="text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
             <span className="bg-gradient-to-r from-orange-700 via-orange-600 to-blue-500 bg-clip-text text-transparent">
               LNCT Group
             </span>
@@ -80,12 +80,12 @@ const LNCTHero = () => {
             <span className="text-gray-600">of Institutions</span>
           </h1>
 
-          <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-700 mb-8 leading-relaxed">
             Empowering minds, shaping futures, and creating tomorrow's innovators through world-class education and
             cutting-edge research.
           </p>
 
-          <div className="flex flex-col items-center justify-start sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-start gap-4">
             <div
               onClick={scrollToPrograms}
               className="group bg-gradient-to-r  from-orange-600 to-orange-600 hover:from-orange-500 hover:to-orange-600 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1 cursor-pointer"
@@ -104,10 +104,10 @@ const LNCTHero = () => {
 
           {/* Stats */}
           <div className="grid grid-cols-3 gap-6 mt-12">
-            {[
+            { [
               { number: "50K+", label: "Alumni" },
               { number: "200+", label: "Faculty" },
-              { number: "15+", label: "Programs" },
+              { number: "15+", label: "Programs" }
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-2xl font-bold text-blue-600">{stat.number}</div>
@@ -120,11 +120,11 @@ const LNCTHero = () => {
         {/* Right Visual Section */}
 
         <div
-          className={`w-1/2 transform transition-all duration-1000 delay-300 ${isVisible ? "translate-x-0 opacity-100" : "translate-x-12 opacity-0"}`}
+          className={`w-full mt-10 lg:mt-0 lg:w-1/2 transform transition-all duration-1000 delay-300 ${isVisible ? "translate-x-0 opacity-100" : "translate-x-12 opacity-0"}`}
         >
           <div className="relative">
             <div className="bg-gradient-to-br from-blue-50/80 to-indigo-50/60 backdrop-blur-lg rounded-3xl shadow-2xl overflow-hidden border border-blue-200">
-              <div className="h-92 relative overflow-hidden">
+              <div className="h-64 sm:h-80 md:h-92 relative overflow-hidden">
                 <div className="tier absolute inset-0 bg-gradient-to-b from-blue-200 via-indigo-300 to-blue-300">
                   {images.map((img, index) => (
                     <img
@@ -445,7 +445,7 @@ const AcademicPrograms = () => {
 
     return (
       <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-        <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+        <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto p-2 sm:p-4">
           <div className={`bg-gradient-to-r ${program.bgGradient} p-6 text-white relative`}>
             <div
               onClick={onClose}
@@ -476,7 +476,7 @@ const AcademicPrograms = () => {
             </div>
           </div>
 
-          <div className="p-6">
+          <div className="p-4 sm:p-6">
             <div className="mb-6">
               <h3 className="text-xl font-bold text-gray-800 mb-3">Program Overview</h3>
               <p className="text-gray-600 leading-relaxed">{program.fullDescription}</p>
@@ -494,7 +494,7 @@ const AcademicPrograms = () => {
               </ul>
             </div>
 
-            <div className="flex gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 className="flex-1 bg-blue-100 text-blue-700 px-6 py-3 rounded-xl font-medium hover:shadow-lg transition-all cursor-pointer text-center"
                 href={program.apply}
@@ -518,7 +518,7 @@ const AcademicPrograms = () => {
 
   return (
     <div id="programs-section" className="bg-gradient-to-br from-blue-100 via-orange-50 to-orange-100 min-h-screen py-20">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4">
         {/* Header Section */}
         <div
           className={`text-center mb-16 transform transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}`}
@@ -533,13 +533,13 @@ const AcademicPrograms = () => {
               Perfect Program
             </span>
           </h1>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-700 ">
             Choose from our comprehensive range of world-class programs designed to shape tomorrow's leaders and
             innovators.
           </p>
         </div>
         {/* Programs Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {visiblePrograms.map((program, index) => (
             <div
               key={program.id}
@@ -589,7 +589,7 @@ const AcademicPrograms = () => {
               </div>
 
               {/* Content */}
-              <div className="p-6 relative z-10">
+              <div className="p-4 sm:p-6 relative z-10">
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="text-xl font-bold text-gray-800 group-hover:text-blue-700 transition-colors">
                     {program.title}

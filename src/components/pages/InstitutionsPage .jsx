@@ -4,6 +4,7 @@ import AIChatbox from "../AIChatbox"
 import Footer from "../Footer";
 import EnhancedCampusNetwork from '../EnhancedCampusNetwork';
 import EventsNews from '../EventNews';
+import { IoIosSearch } from "react-icons/io";
 
 const LNCTInstitutionsPage = () => {
   const [selectedFilter, setSelectedFilter] = useState('All');
@@ -365,16 +366,19 @@ const LNCTInstitutionsPage = () => {
               ))}
             </div>
             
-            <div className="relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
+            <div className="relative w-full max-w-md lg:max-w-md">
+            {/* Search Icon */}
+            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 z-10 pointer-events-none" />
+  
+            {/* Search Input */}
+            <input
                 type="text"
                 placeholder="Search campuses..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-12 pr-6 py-4 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-blue-500 text-black focus:border-transparent w-full lg:w-80 shadow-sm bg-white/80 backdrop-blur-sm"
-              />
-            </div>
+                className="w-full pl-12 pr-6 py-4 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-blue-500 text-black focus:border-transparent shadow-sm bg-white/80 backdrop-blur-sm transition-all duration-200 hover:bg-white/90 focus:bg-white"
+            />
+</div>
           </div>
 
           {/* Institutions Grid */}
