@@ -85,17 +85,17 @@ const LNCTHero = () => {
             cutting-edge research.
           </p>
 
-          <div className="flex flex-col items-center justify-center sm:flex-row gap-4">
+          <div className="flex flex-col items-center justify-start sm:flex-row gap-4">
             <div
               onClick={scrollToPrograms}
-              className="group bg-gradient-to-r from-orange-600 to-orange-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1 cursor-pointer"
+              className="group bg-gradient-to-r  from-orange-600 to-orange-600 hover:from-orange-500 hover:to-orange-600 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1 cursor-pointer"
             >
               <span className="flex items-center justify-center">
                 Explore Programs
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </span>
             </div>
-            <div className="border-2 border-blue-400 text-blue-600 hover:bg-blue-100 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300">
+            <div className="border-2  border-blue-400 text-blue-600 hover:bg-blue-100 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300">
               <a className="" href="https://tour.lnct.ac.in/LNCT/">
                 Virtual Tour
               </a>
@@ -175,7 +175,7 @@ const AcademicPrograms = () => {
       id: 1,
       title: "Engineering & Technology",
       description:
-        "Programs across multiple engineering disciplines with state-of-the-art laboratories and industry partnerships.",
+        "Programs across multiple engineering disciplines with  laboratories and industry partnerships.",
       bgGradient: "from-blue-600 to-indigo-600",
       icon: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/0014_Background.jpg",
       stats: "15+ Specializations",
@@ -218,7 +218,7 @@ const AcademicPrograms = () => {
     {
       id: 3,
       title: "Dentistry",
-      description: "Premier dental education with modern clinics, specialized training, and patient care excellence.",
+      description: "Premier dental education featuring modern clinics, immersive training, and compassionate patient care excellence.",
       bgGradient: "from-blue-600 to-indigo-700",
       icon: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/0009_Dentistry.jpg",
       stats: "Modern Dental Clinic",
@@ -629,7 +629,7 @@ const AcademicPrograms = () => {
           <div className="text-center mt-12">
             <button
               onClick={() => setShowAllPrograms(true)}
-              className="group bg-gradient-to-r from-orange-600 to-orange-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1"
+              className="group bg-gradient-to-r from-orange-600 to-orange-600 hover:from-orange-500 hover:to-orange-600 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1"
             >
               <span className="flex items-center justify-center">
                 View More Programs
@@ -643,7 +643,7 @@ const AcademicPrograms = () => {
           <div className="text-center mt-12">
             <button
               onClick={() => setShowAllPrograms(false)}
-              className="group border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300"
+              className="group border-2  border-blue-600 text-white bg-orange-600 hover:from-orange-500 hover:to-orange-600 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300"
             >
               <span className="flex items-center justify-center">
                 View Less Programs
@@ -663,24 +663,26 @@ const AcademicPrograms = () => {
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-slate-400/10 to-stone-400/10 rounded-full transform -translate-x-24 translate-y-24"></div>
 
             <div className="relative z-10">
-              <h2 className="text-4xl font-bold text-white mb-4">Ready to Shape Your Future?</h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              <h2 className="text-4xl  font-bold text-white ">
+                Ready to Shape Your Future?
+              </h2>
+              <p className=" text-blue-100 ">
                 Join thousands of students who have transformed their lives through our world-class education programs.
               </p>
+              <br />
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="https://admissions.lnct.ac.in/">
-                  <div className="group bg-gradient-to-r from-orange-600 to-orange-600 hover:from-blue-300 hover:to-indigo-700 text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 cursor-pointer">
-                    <span className="flex items-center justify-center">
-                      Apply Now
-                      <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                    </span>
-                  </div>
-                </a>
+                <div className="group bg-gradient-to-r from-orange-600 to-yellow-600 hover:from-orange-700 hover:to-yellow-700 text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 cursor-pointer">
+                  <span className="flex items-center justify-center">
+                    Apply Now
+                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </div></a>
                 <a href="https://lnct.ac.in/wp-content/uploads/2025/03/LNCT-Brochure.pdf">
-                  <div className="border-2 border-orange-400 text-orange-600 hover:bg-gray-800 hover:text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 cursor-pointer">
-                    Download Brochure
-                  </div>
-                </a>
+                <div className="border-2 border-white-400 text-white hover:bg-gray-800 hover:text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 cursor-pointer">
+                  Download Brochure
+                </div></a>
               </div>
             </div>
           </div>

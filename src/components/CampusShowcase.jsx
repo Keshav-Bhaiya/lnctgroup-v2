@@ -18,7 +18,7 @@ const CampusShowcase = () => {
       id: 2,
       name: "LNCT Indore",
       description:
-        "Cutting-edge technology focus with strong industry connections. Taught by inspired and committed,  faculty.",
+        "Cutting-edge technology focus on strong industry connections.Taught by inspired and committed,faculty.",
       location: "Indore, Madhya Pradesh",
       image:
         "https://tse1.mm.bing.net/th?id=OIP.5Yb6BE3ih9skoYQmAUMCVwHaDz&pid=Api&P=0&h=180",
@@ -91,7 +91,7 @@ const CampusShowcase = () => {
           </h1>
 
           {/* Subheading */}
-          <p className="text-center text-gray-700 text-lg max-w-3xl mx-auto mt-3 leading-relaxed">
+          <p className="text-center text-gray-700 ">
             Explore our world-class campuses spread across Central India, each
             offering unique specializations and facilities.
           </p>

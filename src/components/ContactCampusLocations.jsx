@@ -253,26 +253,29 @@ const ContactCampusLocations = () => {
         </div>
 
         {/* Additional Info Section */}
-        <div className="mt-12 text-center">
-          <div className="bg-white rounded-lg shadow-lg p-8">
+        <div className="mt-12 text-center ">
+          <div className="bg-slate-200 rounded-lg shadow-lg p-8">
             <h3 className="text-2xl font-bold text-gray-800 mb-4">
               Ready to Shape Your Future?
             </h3>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+            <p className="text-gray-600 mb-6 ">
               Join thousands of students who have chosen LNCT for their higher education. 
+              <br />
               Contact us today to learn more about our programs and admission process.
             </p>
+            <br />
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <div className="px-8 py-3  text-white rounded-lg hover:bg-gray-200 transition-colors font-semibold">
-                <a className='' href="https://admissions.lnct.ac.in/">Apply Now</a> 
-              </div>
+              
+                <a className='' href="https://admissions.lnct.ac.in/"><div className="px-8 py-3  text-white bg-slate-500 rounded-lg hover:bg-slate-400  transition-colors font-semibold">Apply Now</div></a> 
+              
               <a href="https://lnct.ac.in/wp-content/uploads/2025/03/LNCT-Brochure.pdf" download target="_blank" rel="noopener noreferrer">
-              <div className="px-8 py-3 text-white bg-gray-400 rounded-lg hover:bg-gray-500 transition-colors font-semibold">
+              <div className="px-8 py-3 border-2 border-gray-600 text-gray-600 rounded-lg hover:text-white hover:border-slate-400 hover:bg-slate-400 transition-colors font-semibold">
                 Download Brochure
               </div>
               </a>
             </div>
           </div>
+          
         </div>
       </div>
     </div>

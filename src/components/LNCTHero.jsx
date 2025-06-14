@@ -19,7 +19,7 @@ const LNCTHero = ({ videoSrc }) => {
       </div>
 
       {/* Background Overlay */}
-      <div className="absolute mb-[-35px] inset-0 bg-gradient-to-b from-[#14283c99] to-[#14283c99]" />
+      <div className="absolute mb-[-2px] md:mb-[-62px]  inset-0 bg-gradient-to-b from-[#14283c99] to-[#14283c99]" />
 
       {/* Main Content */}
       <div className="relative z-10 w-full h-full flex items-center justify-center">

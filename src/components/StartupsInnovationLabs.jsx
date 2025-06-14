@@ -9,7 +9,7 @@ const StartupsInnovationLabs = () => {
         <h1 className="text-4xl font-bold mb-4 text-gray-800">
           <span className="text-orange-500">Startups & Innovation Labs</span>
         </h1>
-        <p className="text-gray-600 max-w-2xl mx-auto">
+        <p className="text-gray-600 ">
           Fostering entrepreneurship and innovation through state-of-the-art facilities and mentorship programs.
         </p>
       </div>
@@ -98,7 +98,7 @@ const StartupsInnovationLabs = () => {
                   <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <span className="text-white text-xs">✓</span>
                   </div>
-                  <div className='text-center ml-16'>
+                  <div className=''>
                     <h4 className="font-bold mb-1 text-gray-800">AgriTech Innovations</h4>
                     <p className="text-gray-600 text-sm">Smart farming solutions using IoT and AI</p>
                   </div>

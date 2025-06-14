@@ -57,7 +57,7 @@ const EventsNews = () => {
           <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
             Events & News
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          <p className=" text-gray-600 ">
             Stay updated with the latest happenings, events, and achievements across LNCT Group institutions.
           </p>
         </div>

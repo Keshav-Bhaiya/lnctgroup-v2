@@ -78,21 +78,21 @@ const Footer = () => {
             <h4 className="text-white font-semibold text-lg mb-4">Contact Us</h4>
             <div className="space-y-3">
               <div className="flex items-start space-x-3">
-                <Mail size={16} className="text-orange-500 mt-0.5 ml-21 flex-shrink-0" />
+                <Mail size={16} className="text-orange-500 mt-0.5  flex-shrink-0" />
                 <a href="mailto:info@lnct.ac.in" className="text-gray-400 hover:text-white transition-colors text-sm">
                   info@lnct.ac.in
                 </a>
               </div>
               
               <div className="flex items-start space-x-3">
-                <Phone size={16} className="text-orange-500 mt-0.5 ml-20 flex-shrink-0" />
+                <Phone size={16} className="text-orange-500 mt-0.5  flex-shrink-0" />
                 <a href="tel:+917556185300" className="text-gray-400 hover:text-white transition-colors text-sm">
                   +91 755-6185300
                 </a>
               </div>
               
               <div className="flex items-start space-x-3">
-                <MapPin size={16} className="text-orange-500 ml-10 mt-0.5 flex-shrink-0" />
+                <MapPin size={16} className="text-orange-500  mt-0.5 flex-shrink-0" />
                 <address className="text-gray-400 text-sm not-italic">
                   Kalchuri Nagar, Raisen Road,<br />
                   Bhopal, Madhya Pradesh -<br />

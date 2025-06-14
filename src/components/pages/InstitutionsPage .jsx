@@ -340,10 +340,9 @@ const LNCTInstitutionsPage = () => {
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16" data-scroll data-scroll-speed="1">
-            <h2 className="text-5xl md:text-6xl font-black bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent mb-6">
-              Our Campuses
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          
+            <h1 className='text-5xl md:text-10xl  font-black bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent '> Our Campuses</h1>
+            <p className='text-gray-800 '>
               Discover world-class institutions designed to shape tomorrow's leaders
             </p>
           </div>
@@ -530,12 +529,14 @@ const LNCTInstitutionsPage = () => {
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-slate-400/10 to-stone-400/10 rounded-full transform -translate-x-24 translate-y-24"></div>
             
             <div className="relative z-10">
-              <h2 className="text-4xl font-bold text-white mb-4">
+              <h2 className="text-4xl  font-bold text-white ">
                 Ready to Shape Your Future?
               </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              <p className=" text-blue-100 ">
                 Join thousands of students who have transformed their lives through our world-class education programs.
               </p>
+              <br />
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="https://admissions.lnct.ac.in/">
                 <div className="group bg-gradient-to-r from-orange-600 to-yellow-600 hover:from-orange-700 hover:to-yellow-700 text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 cursor-pointer">
@@ -545,7 +546,7 @@ const LNCTInstitutionsPage = () => {
                   </span>
                 </div></a>
                 <a href="https://lnct.ac.in/wp-content/uploads/2025/03/LNCT-Brochure.pdf">
-                <div className="border-2 border-orange-400 text-orange-600 hover:bg-gray-800 hover:text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 cursor-pointer">
+                <div className="border-2 border-white-400 text-white hover:bg-gray-800 hover:text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 cursor-pointer">
                   Download Brochure
                 </div></a>
               </div>

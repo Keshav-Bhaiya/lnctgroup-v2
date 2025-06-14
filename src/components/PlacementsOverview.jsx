@@ -102,7 +102,7 @@ const PlacementsOverview = () => {
         <h1 className="text-5xl font-bold text-orange-500 mb-6">
           Placements Overview
         </h1>
-        <p className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-center text-slate-600 ">
           Empowering students with exceptional career opportunities through partnerships with industry leaders
         </p>
       </div>
