@@ -308,9 +308,11 @@ const PlacementsOverview = () => {
           <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/20">
             <div className="flex justify-between items-center mb-10">
               <h2 className="text-2xl font-bold text-slate-800">Our Top Recruiters</h2>
+              <a href="https://lnct.ac.in/placement-records/">
               <button className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-3 rounded-xl hover:from-orange-600 hover:to-orange-700 flex items-center gap-2 font-semibold transition-all duration-300 shadow-lg shadow-orange-500/25 hover:shadow-xl hover:scale-105">
                 View All <span className="text-lg">→</span>
               </button>
+              </a>
             </div>
             
             {/* Company logos grid */}
