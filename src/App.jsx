@@ -12,6 +12,7 @@ import Footer from "./components/Footer"
 import InstitutionsPage from "../src/components/pages/InstitutionsPage "
 import ProgramsPage from "../src/components/pages/ProgramsPage"
 import video from "./assets/video.mp4"
+import ScrollToTop from "./ScrollToTop"
 
 const HomePage = () => (
   <>
@@ -30,6 +31,7 @@ function App() {
   return (
     <div className="min-h-screen ">
       <Nav />
+      <ScrollToTop />
       <main className="w-full">
         <Routes>
           <Route path="/" element={<HomePage />} />

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, Youtube } from 'lucide-react';
-
+import { IoLogoLinkedin } from "react-icons/io";
 const Footer = () => {
   return (
     <footer className="bg-slate-900 text-gray-300 py-12 px-4">
@@ -72,8 +72,8 @@ const Footer = () => {
               <li><a href="https://lnctu.ac.in/courses-offered/" className="text-gray-400 hover:text-white transition-colors text-sm">Diploma Courses</a></li>
             </ul>
           </div>
-
-          {/* Contact Us Section */}
+          <div className='flex flex-col gap-4' >
+ {/* contact Section */}
           <div className=''>
             <h4 className="text-white font-semibold text-lg mb-4">Contact Us</h4>
             <div className="space-y-3">
@@ -100,6 +100,31 @@ const Footer = () => {
                 </address>
               </div>
             </div>
+          </div>
+           {/* Developed Section */}
+            <div className=''>
+            <h4 className="text-white font-semibold text-md mb-3">Developed by :</h4>
+            <div className="space-y-3">
+              <div className="flex gap-2 flex-col ml-4 items-start space-x-3">
+                
+                <a href="https://www.linkedin.com/in/keshav-bhaiya-021b092a7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="text-gray-400 hover:text-white transition-colors flex gap-1 justify-center items-center text-sm">
+                 <IoLogoLinkedin />
+                 Keshav Bhaiya
+                </a>
+                 <a href="https://www.linkedin.com/in/nikunj-garg-35aa752a7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="text-gray-400 hover:text-white transition-colors flex gap-1 justify-center items-center text-sm">
+                   <IoLogoLinkedin />
+                Nikunj Garg
+                </a> <a href="https://www.linkedin.com/in/mahak-rajput-5b70232b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="text-gray-400 flex gap-1 justify-center items-center hover:text-white transition-colors text-sm">
+                   <IoLogoLinkedin />
+                 Mahak Rajput
+                </a>
+              </div>
+              
+           
+              
+              
+            </div>
+          </div>
           </div>
         </div>
 

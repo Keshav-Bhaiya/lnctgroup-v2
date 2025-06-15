@@ -561,7 +561,6 @@ const LNCTInstitutionsPage = () => {
           </div>
         </div>
         <br />
-       
       <Footer />
     </div>
   );
