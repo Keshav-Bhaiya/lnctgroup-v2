@@ -325,13 +325,16 @@ const LNCTInstitutionsPage = () => {
               Explore Campuses
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
+            <div className=' rounded-md '>
             <a href=" https://tour.lnct.ac.in/LNCT/">
-            <button className=" border-orange-400 text-white hover:bg-orange-100 hover:text-white px-10 py-5 rounded-full font-semibold text-lg  transition-all duration-300 shadow-xl flex items-center gap-3">
+            <div className=" border-orange-400 text-white bg-gray-800 hover:bg-orange-600   px-6 py-2.5 rounded-md font-semibold text-lg  transition-all duration-300 shadow-xl flex items-center gap-3">
               <Globe className="w-6 h-6" />
               Virtual Tour
               <ChevronDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
-            </button>
+            </div>
             </a>
+            </div>
+            
           </div>
         </div>
       </section>
