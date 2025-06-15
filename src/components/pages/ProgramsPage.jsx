@@ -63,7 +63,7 @@ const LNCTHero = () => {
           </div>
         </div>
 
-      <div className="container mx-auto px-4 sm:px-6 py-12 flex flex-col lg:flex-row items-center justify-between min-h-screen relative z-10 gap-10 lg:gap-0">
+      <div className="container mx-auto px-4 sm:px-6 py-12 flex flex-col-reverse lg:flex-row items-center justify-between min-h-screen relative z-10 gap-6 sm:gap-10 lg:gap-0">
         {/* Left Content Section */}
         <div
           className={`w-full lg:w-1/2 lg:pr-12 transform transition-all duration-1000 ${isVisible ? "translate-x-0 opacity-100" : "-translate-x-12 opacity-0"}`}
@@ -73,7 +73,7 @@ const LNCTHero = () => {
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-orange-700 via-orange-600 to-blue-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-orange-700 via-orange-600 to-slate-600 bg-clip-text text-transparent">
               LNCT Group
             </span>
             <br />
@@ -95,15 +95,15 @@ const LNCTHero = () => {
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </span>
             </div>
-            <div className="border-2  border-blue-400 text-blue-600 hover:bg-blue-100 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300">
+            
               <a className="" href="https://tour.lnct.ac.in/LNCT/">
-                Virtual Tour
+              <div className="border-2  border-blue-400 text-blue-600 hover:bg-blue-100 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300">  Virtual Tour</div>
               </a>
-            </div>
+            
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-6 mt-12">
+          <div className="grid grid-cols-3 gap-6 mt-12 pb-8 sm:pb-0">
             { [
               { number: "50K+", label: "Alumni" },
               { number: "200+", label: "Faculty" },
@@ -120,7 +120,7 @@ const LNCTHero = () => {
         {/* Right Visual Section */}
 
         <div
-          className={`w-full mt-10 lg:mt-0 lg:w-1/2 transform transition-all duration-1000 delay-300 ${isVisible ? "translate-x-0 opacity-100" : "translate-x-12 opacity-0"}`}
+          className={`w-full pt-10 sm:pt-0 mt-16 sm:mt-10 lg:mt-0 lg:w-1/2 transform transition-all duration-1000 delay-300 ${isVisible ? "translate-x-0 opacity-100" : "translate-x-12 opacity-0"}`}
         >
           <div className="relative">
             <div className="bg-gradient-to-br from-blue-50/80 to-indigo-50/60 backdrop-blur-lg rounded-3xl shadow-2xl overflow-hidden border border-blue-200">

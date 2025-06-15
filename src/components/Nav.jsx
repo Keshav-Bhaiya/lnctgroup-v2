@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-
+import { GiHamburgerMenu } from "react-icons/gi";
 const AnnouncementBanner = () => {
   const announcements = [
     { icon: "📍", text: "Central India" },
@@ -154,18 +154,20 @@ const Header = () => {
             </div>
 
             {/* Mobile Menu Toggle */}
-            <button
-              className="md:hidden p-2"
+           
+            <div
+            
+              className="md:hidden p-2 bg-white border border-white hover:bg-white focus:bg-white"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
-              <svg className="h-5 w-5 text-gray-100" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isMobileMenuOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 ) : (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 )}
               </svg>
-            </button>
+            </div>
           </div>
         </div>
 
