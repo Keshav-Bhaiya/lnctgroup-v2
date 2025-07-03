@@ -13,6 +13,7 @@ import InstitutionsPage from "../src/components/pages/InstitutionsPage "
 import ProgramsPage from "../src/components/pages/ProgramsPage"
 import video from "./assets/video.mp4"
 import ScrollToTop from "./ScrollToTop"
+import LocomotiveScroll from "locomotive-scroll"
 
 const HomePage = () => (
   <>
@@ -28,6 +29,8 @@ const HomePage = () => (
 )
 
 function App() {
+const locomotiveScroll = new LocomotiveScroll();
+
   return (
     <div className="min-h-screen ">
       <Nav />
