@@ -177,7 +177,7 @@ const AcademicPrograms = () => {
       description:
         "Programs across multiple engineering disciplines with  laboratories and industry partnerships.",
       bgGradient: "from-blue-600 to-indigo-600",
-      icon: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/0014_Background.jpg",
+      icon: "https://tse1.mm.bing.net/th/id/OIP.xMb1m0XNeKpaK26L7y_nWAHaEJ?rs=1&pid=ImgDetMain&o=7&rm=3",
       stats: "15+ Specializations",
       duration: "4 Years",
       location: "Main Campus",
@@ -199,7 +199,7 @@ const AcademicPrograms = () => {
       description:
         "Comprehensive medical education with hands-on clinical experience and advanced healthcare training facilities.",
       bgGradient: "from-indigo-600 to-blue-700",
-      icon: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/0005_Medicine.jpg",
+      icon: "https://www.chestnet.org/-/media/Advocates/Winter-2024/768x457-WINTER-Advocate-letter.ashx",
       stats: "500+ Beds Hospital",
       duration: "5.5 Years",
       location: "Medical Campus",
@@ -220,7 +220,7 @@ const AcademicPrograms = () => {
       title: "Dentistry",
       description: "Premier dental education featuring modern clinics, immersive training, and compassionate patient care excellence.",
       bgGradient: "from-blue-600 to-indigo-700",
-      icon: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/0009_Dentistry.jpg",
+      icon: "https://www.shutterstock.com/shutterstock/videos/1107040889/thumb/1.jpg?ip=x480",
       stats: "Modern Dental Clinic",
       duration: "5 Years",
       location: "Dental Campus",
@@ -242,7 +242,7 @@ const AcademicPrograms = () => {
       description:
         "Business programs focusing on leadership, entrepreneurship, and strategic management with global perspectives.",
       bgGradient: "from-indigo-600 to-blue-700",
-      icon: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/0006_Management.jpg",
+      icon: "https://tse2.mm.bing.net/th/id/OIP.lqop2OwnvnN1BZyyMk_LRwAAAA?rs=1&pid=ImgDetMain&o=7&rm=3",
       stats: "100% Placement",
       duration: "2 Years",
       apply: "https://lnctu.ac.in/school-of-management/",
@@ -264,7 +264,7 @@ const AcademicPrograms = () => {
       description:
         "Comprehensive legal education with moot courts, legal clinics, and expertise in constitutional and corporate law.",
       bgGradient: "from-blue-600 to-indigo-700",
-      icon: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/0007_LAW-1.jpg",
+      icon: "https://static.vecteezy.com/system/resources/thumbnails/010/927/076/original/justice-and-law-concept-male-judge-in-a-courtroom-on-wooden-table-and-counselor-or-male-lawyer-working-in-office-legal-law-advice-and-justice-concept-free-video.jpg",
       stats: "Moot Court Available",
       duration: "5 Years",
       location: "Law College",
@@ -283,11 +283,11 @@ const AcademicPrograms = () => {
     {
       id: 6,
       title: "Architecture",
-      apply: "https://lnctu.ac.in/school-of-architecture/",
+      apply: "https://img.freepik.com/premium-photo/undergraduate-architecture-students-work-models-modern-box-house-holding-part-model-while-thinking-about-concepts-building_968517-119925.jpg",
       description:
         "Creative architectural programs with design studios, workshop facilities, and sustainable building practices.",
       bgGradient: "from-blue-700 to-indigo-700",
-      icon: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/0010_Architecture.jpg",
+      icon: "https://img.freepik.com/premium-photo/undergraduate-architecture-students-work-models-modern-box-house-holding-part-model-while-thinking-about-concepts-building_968517-119925.jpg",
       stats: "Design Studios",
       duration: "5 Years",
       location: "Architecture Wing",
@@ -306,11 +306,11 @@ const AcademicPrograms = () => {
     {
       id: 7,
       title: "Science & Humanities",
-      apply: "https://lnct.ac.in/lnct-and-science/",
+      apply: "https://media.istockphoto.com/id/1448069413/photo/group-of-indian-students-working-or-experimenting-in-science-lab.jpg?s=612x612&w=0&k=20&c=7-f5fWnPqv4IMIeHcP6PFAxcjbVoQORELD-PwYXuoXI=",
       description:
         "Diverse programs in pure sciences and humanities with research opportunities and interdisciplinary approach.",
       bgGradient: "from-indigo-700 to-blue-800",
-      icon: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/boxImg_science_humanities.jpg",
+      icon: "https://media.istockphoto.com/id/1448069413/photo/group-of-indian-students-working-or-experimenting-in-science-lab.jpg?s=612x612&w=0&k=20&c=7-f5fWnPqv4IMIeHcP6PFAxcjbVoQORELD-PwYXuoXI=",
       stats: "Research Labs",
       duration: "3-4 Years",
       location: "Science Block",
@@ -328,11 +328,11 @@ const AcademicPrograms = () => {
     {
       id: 8,
       title: "Agriculture Sciences",
-      apply: "https://lnctu.ac.in/school-of-agriculture/",
+      icon: "https://lnctu.ac.in/wp-content/uploads/2021/05/agriculture-student.jpg",
       description:
         "Practical agricultural education with experimental farms, modern techniques, and sustainable farming practices.",
       bgGradient: "from-green-600 to-blue-600",
-      icon: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/0011_Agriculture-Sciences.jpg",
+      apply: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/0011_Agriculture-Sciences.jpg",
       stats: "50+ Acre Farm",
       duration: "4 Years",
       location: "Agriculture Campus",
@@ -350,11 +350,11 @@ const AcademicPrograms = () => {
     {
       id: 9,
       title: "Pharmacy",
-      apply: "https://lnct.ac.in/lnct-pharmacy/",
+      icon: "https://happenings.lpu.in/wp-content/uploads/2024/02/LPU-students-are-doing-research-work-in-their-lab.jpg",
       description:
         "Comprehensive pharmaceutical education with modern labs, drug development facilities, and industry connections.",
       bgGradient: "from-blue-700 to-indigo-800",
-      icon: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/boxImg_pharmacy.jpg",
+      apply: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/boxImg_pharmacy.jpg",
       stats: "Modern Lab Setup",
       duration: "4 Years",
       location: "Pharmacy Block",
@@ -372,11 +372,11 @@ const AcademicPrograms = () => {
     {
       id: 10,
       title: "Nursing",
-      apply: "https://lnctu.ac.in/school-of-nursing/",
+      icon: "https://img.freepik.com/premium-photo/nursing-student-tamil-nadu-indian-student-studying-medical-university_297535-5888.jpg?w=2000",
       description:
         "Professional nursing education with clinical training, patient care excellence, and healthcare leadership development.",
       bgGradient: "from-pink-600 to-blue-600",
-      icon: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/boxImg_nursing.jpg",
+      apply: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/boxImg_nursing.jpg",
       stats: "Clinical Training",
       duration: "4 Years",
       location: "Nursing College",
@@ -394,11 +394,11 @@ const AcademicPrograms = () => {
     {
       id: 11,
       title: "Physiotherapy",
-      apply: "https://lnctu.ac.in/master-physiotherapy-mpt-course/",
+      icon: "https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2017/07/07/Pictures/_72dea39e-6316-11e7-b1de-0034c3d6ea80.jpg",
       description:
         "Comprehensive rehabilitation education with modern equipment, clinical practice, and sports medicine specialization.",
       bgGradient: "from-teal-600 to-blue-700",
-      icon: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/boxImg_physiotheropy.jpg",
+      apply: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/boxImg_physiotheropy.jpg",
       stats: "Rehab Center",
       duration: "4.5 Years",
       location: "Allied Health Campus",
@@ -416,7 +416,7 @@ const AcademicPrograms = () => {
     {
       id: 12,
       title: "Hotel Management",
-      apply: "https://lnctu.ac.in/school-of-hotel-management/",
+      apply: "https://tse2.mm.bing.net/th/id/OIP.pQku5xafi2H9VapInp-BAgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3",
       description:
         "Hospitality education with practical training, industry exposure, and culinary arts specialization.",
       bgGradient: "from-blue-600 to-purple-600",
