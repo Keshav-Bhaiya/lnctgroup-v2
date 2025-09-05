@@ -283,7 +283,7 @@ const AcademicPrograms = () => {
     {
       id: 6,
       title: "Architecture",
-      apply: "https://img.freepik.com/premium-photo/undergraduate-architecture-students-work-models-modern-box-house-holding-part-model-while-thinking-about-concepts-building_968517-119925.jpg",
+      apply: "https://lnctu.ac.in/school-of-architecture/",
       description:
         "Creative architectural programs with design studios, workshop facilities, and sustainable building practices.",
       bgGradient: "from-blue-700 to-indigo-700",
@@ -306,7 +306,7 @@ const AcademicPrograms = () => {
     {
       id: 7,
       title: "Science & Humanities",
-      apply: "https://media.istockphoto.com/id/1448069413/photo/group-of-indian-students-working-or-experimenting-in-science-lab.jpg?s=612x612&w=0&k=20&c=7-f5fWnPqv4IMIeHcP6PFAxcjbVoQORELD-PwYXuoXI=",
+      apply: "https://lnct.ac.in/engineering-sciences-humanities/",
       description:
         "Diverse programs in pure sciences and humanities with research opportunities and interdisciplinary approach.",
       bgGradient: "from-indigo-700 to-blue-800",
@@ -332,7 +332,7 @@ const AcademicPrograms = () => {
       description:
         "Practical agricultural education with experimental farms, modern techniques, and sustainable farming practices.",
       bgGradient: "from-green-600 to-blue-600",
-      apply: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/0011_Agriculture-Sciences.jpg",
+      apply: "https://lnctu.ac.in/school-of-agriculture/",
       stats: "50+ Acre Farm",
       duration: "4 Years",
       location: "Agriculture Campus",
@@ -354,7 +354,7 @@ const AcademicPrograms = () => {
       description:
         "Comprehensive pharmaceutical education with modern labs, drug development facilities, and industry connections.",
       bgGradient: "from-blue-700 to-indigo-800",
-      apply: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/boxImg_pharmacy.jpg",
+      apply: "https://lnct.ac.in/lnct-pharmacy/",
       stats: "Modern Lab Setup",
       duration: "4 Years",
       location: "Pharmacy Block",
@@ -376,7 +376,7 @@ const AcademicPrograms = () => {
       description:
         "Professional nursing education with clinical training, patient care excellence, and healthcare leadership development.",
       bgGradient: "from-pink-600 to-blue-600",
-      apply: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/boxImg_nursing.jpg",
+      apply: "https://lnctvu.ac.in/bsc-nursing/",
       stats: "Clinical Training",
       duration: "4 Years",
       location: "Nursing College",
@@ -398,7 +398,7 @@ const AcademicPrograms = () => {
       description:
         "Comprehensive rehabilitation education with modern equipment, clinical practice, and sports medicine specialization.",
       bgGradient: "from-teal-600 to-blue-700",
-      apply: "https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2024/11/boxImg_physiotheropy.jpg",
+      apply: "https://lnctu.ac.in/master-physiotherapy-mpt-course/",
       stats: "Rehab Center",
       duration: "4.5 Years",
       location: "Allied Health Campus",
@@ -416,7 +416,7 @@ const AcademicPrograms = () => {
     {
       id: 12,
       title: "Hotel Management",
-      apply: "https://tse2.mm.bing.net/th/id/OIP.pQku5xafi2H9VapInp-BAgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3",
+      apply: "https://lnctu.ac.in/school-of-hotel-management/",
       description:
         "Hospitality education with practical training, industry exposure, and culinary arts specialization.",
       bgGradient: "from-blue-600 to-purple-600",
