@@ -21,7 +21,7 @@ const CampusShowcase = () => {
         "Cutting-edge technology focus on strong industry connections.Taught by inspired and committed,faculty.",
       location: "Indore, Madhya Pradesh",
       image:
-        "https://tse1.mm.bing.net/th?id=OIP.5Yb6BE3ih9skoYQmAUMCVwHaDz&pid=Api&P=0&h=180",
+        "https://tse3.mm.bing.net/th/id/OIP.8_eBGM6Zoz48QcFKwwjYOAHaDz?pid=Api&P=0&h=180",
       flagship: false,
     },
     {
